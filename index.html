@@ -1,42 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr-FR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="premierJeux.css" />
-    <script src="premierJeux.js"></script>
-   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Orbitron:wght@500&display=swap"
-       rel="stylesheet">
-        <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-    <title>Rock, Paper, Scicors - My First Game - FB</title>
+    <title>Exercices HTML | Javascript | CSS - FaycalBESS</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
-            <div id="score">
-                <p id="plScore">Player Score : 00</p>
-                <p id="compScore">Computer Score : 00</p>
+        <h1>About me :</h1>
+        <div class="contents">
+            <p class="textPrez" id="prez">
+                <img class="face" src="images/icon_Faycal.png" alt="FaycalBESS" width="110px"
+                    title="Je suis beau comme ça, non !!" />
+                Salut, je suis Fayçal. </br> Je me suis (re) découvert une passion pour le code et je suis mon petit
+                <span id="bonhomme">bonhomme
+                    😉</span> de chemin en essayant d'apprendre à coder, en suivant des tutoriaux, en faisant des
+                exercices et en regardant des heures et des heures de vidéos.</br>
+                Sur twitter <a href="https://twitter.com/BessahFaycal?ref_src=twsrc%5Etfw" class="twitter-follow-button"
+                    data-show-count="false">Follow @BessahFaycal</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>je suis tombé sur
+                les hashtags #100DaysOfCode #CodeNewbies que reprenait un challenge de jeunes développeurs en herbe qui
+                se sont donné 100 jours pour apprendre à coder sous différents environnements et qui partageaient,
+                chaque jour, leur avancement en publiant leurs réalisations. Ça m'a boosté et motivé
+                pour en faire de même.
+            </p>
+
+            <p class="textPrez" id="suite">
+                Une autre chose qui me motive énormément, c'est de partager les trucs et astuces que j'ai appris et
+                d'aider, à chaque fois que je peux le faire, les gens qui sont autour de moi à avancer et à prendre du
+                plaisr en codant, tout comme moi j'en prends.
+            </p>
+            <p class="textPrez" id="suite2"> Peut-être
+                Il y a sur twitter également une tendance de plus en plus populiare parmi la communauté consistant à
+                "tester" ses connaissances en développant des jeux mêlant HTML, CSS et Javascript. je me suis laissé
+                également embarquer là-dedans, je créé cette page pour répertorier, au fur et à mesure, les jeux que
+                jj'aurai réussi à développer. Peut-être que cette page deviendra un jour mon blog officiels, vous
+                auriez été les premiers à la découvrir.
+            </p>
+            <p class="textPrez" id="suite3">
+                Pour finir, je mettrai en bas de la page quelques tweets ou
+                des comptes twitter que je follow et qui m'apprennent énormément tous les jours.
+                <span id="keepCoding">So, keep Coding and never give up</span>
+            </p>
+        </div>
+        <h2>Mes jeux :</h2>
+        <div class="mesJeux">
+            <div class="jeux1"><img src="images/Shifumi.png" alt="le jeux du : Pierre Papier Ciseau" width="200px"
+                    onclick='window.open("Shifumi/Shifumi.html", "Pierre, Papier, Ciseau",
+                    "scrollbars=no, menubar=no, toolbar=no, width=450,height=505")' />
             </div>
-            <div class="donne">
-                <p id="rndCnt">Round - 00</p>
-                <p id="computer">Computer :</p>
-                <img src="images/rock_big.png" class="ordi" id="ordi_rock" width="75px" height="75px" />
-                <img src="images/paper_big.png" class="ordi" id="ordi_paper" width="75px" height="75px" />
-                <img src="images/scisors_big.png" class="ordi" id="ordi_scisors" width="75px" height="75px" />
-                <p class="greeting" id="ordiGreetings"></p>
+            <div class="jeux2">
+
             </div>
-             <div class="jeux">
-                 <p id="player2">Player :</p>
-                 <img src="images/rock_big.png" class="gamer" id="gamer_rock" width="75px" height="75px" />
-                 <img src="images/paper_big.png" class="gamer" id="gamer_paper" width="75px" height="75px" />
-                 <img src="images/scisors_big.png" class="gamer" id="gamer_scisors" width="75px" height="75px" />
-                 <p class="greeting" id="playerGreetings"></p>
-             </div>
-             <div class="choix">
-                 <img src="images/rock_ico.png" class="picto" id="icn_rock" width="50px" height="50px" />
-                 <img src="images/paper_ico.png" class="picto" id="icn_paper" width="50px" height="50px" />
-                 <img src="images/scisors_ico.png" class="picto" id="icn_scisors" width="50px" height="50px" />
-                 <p id="choose">Choose One</p>
-             </div>
+        </div>
+        <h2>Ma sélection de comptes à suivre :</h2>
+        <div class=" twitter">
+            <div class="twitterAccount">
+                <a class="twitter-timeline" data-width="220" data-height="350"
+                    href="https://twitter.com/DThompsonDev?ref_src=twsrc%5Etfw">Tweets by DThompsonDev</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+            <div class="twitterAccount">
+                <a class="twitter-timeline" data-width="220" data-height="350"
+                    href="https://twitter.com/frontenddude?ref_src=twsrc%5Etfw">Tweets by frontenddude</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+            <div class="twitterAccount">
+                <a class="twitter-timeline" data-width="220" data-height="350"
+                    href="https://twitter.com/ania_kubow?ref_src=twsrc%5Etfw">Tweets by ania_kubow</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+            <div class="twitterAccount">
+                <a class="twitter-timeline" data-width="220" data-height="350"
+                    href="https://twitter.com/_kud?ref_src=twsrc%5Etfw">Tweets by _kud</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+        </div>
+    </div>
+
+
     </div>
 </body>
+
 </html>

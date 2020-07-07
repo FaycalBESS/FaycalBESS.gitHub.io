@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="premierJeux.css" />
+    <script src="premierJeux.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Orbitron:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <title>Rock, Paper, Scicors - My First Game - FB</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="score">
+            <p id="plScore">Player Score : 00</p>
+            <p id="compScore">Computer Score : 00</p>
+        </div>
+        <div class="donne">
+            <p id="rndCnt">Round - 00</p>
+            <p id="computer">Computer :</p>
+            <img src="images/rock_big.png" class="ordi" id="ordi_rock" width="75px" height="75px" />
+            <img src="images/paper_big.png" class="ordi" id="ordi_paper" width="75px" height="75px" />
+            <img src="images/scisors_big.png" class="ordi" id="ordi_scisors" width="75px" height="75px" />
+            <p class="greeting" id="ordiGreetings">Le jeu <strong>Pierre – Feuille – Ciseaux</strong> est un petit jeu
+                convivial qui se joue avec les mains, mêlant hasard et prise de décision. </br>
+                Ce petit jeu trouve ses origines en Chine ou il était appelé « Shoushiling ».</p>
+        </div>
+        <div class="jeux">
+            <p id="player2"></p>
+            <img src="images/rock_big.png" class="gamer" id="gamer_rock" width="75px" height="75px" />
+            <img src="images/paper_big.png" class="gamer" id="gamer_paper" width="75px" height="75px" />
+            <img src="images/scisors_big.png" class="gamer" id="gamer_scisors" width="75px" height="75px" />
+            <p class="greeting" id="playerGreetings">La pierre écrase les ciseaux et gagne | La feuille enveloppe la
+                pierre et gagne | Les ciseaux découpent la feuille et gagnent</br>chaque forme en bat une autre et perd
+                contre une autre. Voici les forces en général au Shifumi.</br><strong class="lien" onclick="start()">
+                    Cliquer si vous vous sentez prêt à affronter le hasard?</strong>
+            </p>
+        </div>
+        <div class="choix">
+            <img src="images/rock_ico.png" class="picto" id="icn_rock" width="50px" height="50px" />
+            <img src="images/paper_ico.png" class="picto" id="icn_paper" width="50px" height="50px" />
+            <img src="images/scisors_ico.png" class="picto" id="icn_scisors" width="50px" height="50px" />
+            <p id="choose">Choose One</p>
+        </div>
+    </div>
+</body>
+
+</html>
