@@ -2,16 +2,17 @@ let playerName = "Player1";
 
 function start() {
     playerName = prompt("Saisis ton nom pour commencer");
-    playerGreetings.style.display = 'none'
-    playerGreetings.style.textAlign = 'center'
-    ordiGreetings.style.display = 'none'
-    ordiGreetings.style.textAlign = 'center'
+    playerGreetings.style.display = 'none';
+    playerGreetings.style.textAlign = 'center';
+    ordiGreetings.style.display = 'none';
+    ordiGreetings.style.textAlign = 'center';
     document.getElementById("player2").innerHTML = playerName;
-    document.getElementById('plScore').innerHTML = playerName + '\'s Score : 00'
-    return playerName
+    document.getElementById('plScore').innerHTML = playerName + '\'s Score : 00';
+    startup();
+    return playerName;
 }
 //les Event.listenrs 
-window.addEventListener("load", startup, false);
+//window.addEventListener("load", startup, false);
 
 function startup() {
     let rock = document.getElementById('icn_rock');
