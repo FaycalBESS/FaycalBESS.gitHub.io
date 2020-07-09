@@ -110,20 +110,20 @@ function score() {
 function donne1() {
     gamerDonne1();
     ordiDonne();
-    setTimeout('score()', 750);
+    setTimeout('score()', 250);
 
 };
 
 function donne2() {
     gamerDonne2();
     ordiDonne();
-    setTimeout('score()', 750);
+    setTimeout('score()', 250);
 
 };
 
 function donne3() {
     gamerDonne3();
     ordiDonne();
-    setTimeout('score()', 750);
+    setTimeout('score()', 250);
 
 };
