@@ -1,0 +1,49 @@
+body {
+    margin: auto;
+    margin-top: 10px;
+    padding: 0;
+    width: 80%;
+    border: 3px solid green;
+
+}
+
+section {
+    width: 100%;
+    height: 300px;
+    box-sizing: border-box;
+}
+
+section.sect1 {
+    background: url(images/img1.png);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+section.sectTxt {
+    padding: 50px 15px;
+    height: auto;
+}
+
+section.sectTxt h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 48px;
+    color: #262626
+}
+
+section.sectTxt p {
+    font-size: 18px;
+}
+
+section.sectTxt div {
+    margin: auto;
+    padding: 10px;
+    width: 50%;
+    background-color: green;
+    color: white;
+    font-size: 22px;
+    font-family: sans-serif;
+    text-align: center;
+    cursor: pointer;
+}

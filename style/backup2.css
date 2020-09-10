@@ -1,0 +1,289 @@
+* {
+  box-sizing: border-box;
+  /* pour me permettre de dimensionner et de positionner mes éléments sans trop de calculs complexes, les marges intérieures et extérieurs étant comprises dans la taille indiquée*/
+}
+
+body,
+html {
+  margin: 0;
+  background-color: rgb(246, 244, 243);
+  /* propriétés globales de la page */
+}
+
+@font-face {
+  /* j'intègre les polices personnalisées utilisées dans mon design avec support des principaux navigateurs*/
+  font-family: 'Aladin';
+  src: url('Aladin-Regular.eot');
+  src: url('../fonts/Aladin-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Aladin-Regular.woff2') format('woff2'),
+    url('../fonts/Aladin-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  /* swap : indique le comportement du navigateur en attendant le chargement de la police personnalisée */
+}
+
+.header .banniere {
+  height: 450px;
+  background-image: linear-gradient(180deg,
+      rgb(0, 0, 0),
+      rgba(196, 196, 196, 0) 116.86%),
+    url('../images/banniereMosquee.jpg');
+  /* j'utilise deux arrière plans, un dégradé liéaire et une image*/
+  background-attachment: scroll, fixed;
+  /* pour un effet parallax, le dégradé scrolle et l'image reste fixe*/
+  background-clip: border-box;
+  /* pour que le fond se redimensionne avec la fenêtre*/
+  background-position: bottom;
+  position: relative;
+  /*pour pouvoir prendre cet élément comme références pour positionner le reste des éléments*/
+}
+
+.banniere .logo {
+  width: 1300px;
+  /* indiquée par le design de la maquette */
+  height: 100%;
+  margin: auto;
+  /* pour centrer la div horizontalement au sein de la div parente */
+  display: flex;
+  justify-content: flex-start;
+  /* aligner les éléments sur le bord gauche de la div*/
+  align-items: center;
+  /* aligner au centre verticalement */
+}
+
+.banniere .banniere-title {
+  /* Une précision supplémentaire dans le sélecteur, au cas ou*/
+  margin: 0;
+  width: 350px;
+  position: relative;
+
+  font-family: Aladin, serif;
+  /* police personnalisée et une police alternative à afficher en attendant ou en cas d'impossibilité du chargement de la première*/
+  font-size: 90px;
+  line-height: 128%;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 6.6px 5.3px 4.6px rgba(0, 0, 0, 0.4);
+}
+
+.banniere h1::after {
+  /*j'utilise un pseudo element pour éviter de polluer mon code HTML*/
+  content: '';
+  width: 1px;
+  height: 315px;
+
+  position: absolute;
+  /* Je le positionne relativement à son parrent, soit le h1*/
+  top: -35px;
+  left: 380px;
+
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.banniere .banniere-text {
+  max-width: 800px;
+  margin-left: 65px;
+
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  line-height: 160%;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.social-media {
+  /* je passe à un sélecteur d'un seul niveau car l'objet englobant change de classe en fonction de sa position dans la page (cf ligne 128)*/
+  text-align: end;
+}
+
+.menu {
+  text-align: end;
+  margin-top: 9px;
+}
+
+.social-media a {
+  margin: 0 0 0 22px;
+  font-size: 40px;
+  color: inherit;
+  /* hériter la couleur de la div englobante pour un changement d'effet au scroll*/
+  opacity: 0.7;
+}
+
+.menu a {
+  margin: 0 0 0 40px;
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  /* pour ne pas appliquer le style par défaut des liens */
+  color: inherit;
+  opacity: 0.7;
+}
+
+a:hover {
+  /* comportement des liens de la navbar au survol de la souris*/
+  opacity: 1;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.banniere .navbar {
+  /* La class affectée par défaut, cette classe sera retirée dès que la div atteindra le haut de l'écran et remplacée par une autre classe qui fixe le menu en haut de la fenêtre*/
+  color: rgb(255, 255, 255);
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  /* de telle sorte à mettre les éléments aux bords du conteneur et de laisser tout l'espace entre eux */
+  align-content: flex-end;
+  height: 100%;
+  top: 0;
+  right: 11.5%;
+  padding: 15px 0;
+  /* 15px en haut ET en bas et 0 à droite ET à gauche*/
+  transition: all 0.25s;
+  /*pour que le changement de classe s'effectue d'une manière fluide qui ressemble à une animation*/
+}
+
+.banniere .navbar-fixed {
+  /* la classe qui sera ajoutée et qui remplacera la classe par défaut*/
+  background-color: rgb(255, 255, 255);
+  color: #584d41;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  /* la "barre de navigation" ainsi créée restera fixe à l'écran au scroll*/
+  top: 0;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-content: flex-end;
+  padding: 5px 11.5% 10px 10%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  /* pour accentuer l'effet 3D au scroll*/
+  transition: all 0.25s;
+  z-index: 3;
+  /*pour que la div soit la plus haute sur l'axe des Z, le z-index doit enn particulier être défini quand on utilise un positionnement autre que static */
+}
+
+.wrapper {
+  width: 1300px;
+  margin: auto;
+  display: flex;
+}
+
+.wrapper .articles {
+  width: calc(100% - 445px);
+  /* le calc() est utilisé ici pour que la taille de lélément englobant prenne TOUT l'espace laissé par le aside qui lui, a une largeur fixe de 445px*/
+  padding: 25px 30px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.35);
+  z-index: 2;
+}
+
+.articles .main-title {
+  margin: 0 0 25px 0;
+  font-family: Volkhov, serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: rgb(88, 77, 65);
+}
+
+.articles .article {
+  margin: 20px 0;
+  position: relative;
+  min-height: 180px;
+  /* le min-weight est indiqué ici car comme l'image est en position absolte, le CSS ne la prends pas en compte pour dimensionner la balise englobante, si le texte de l'article est trop court, l'image sera tronquée. la définition d'une hauteur minimum de l'article prévient ce risque*/
+  font-family: roboto, sans-serif;
+  font-size: 17px;
+  line-height: 1.4em;
+  color: rgb(88, 77, 65);
+}
+
+.article .article-title {
+  margin: 0 0 0 275px;
+  font-family: Volkhov, serif;
+  font-size: 30px;
+}
+
+.article .article-subtitle {
+  margin: 5px 0 5px 275px;
+  font-family: Volkhov, serif;
+  font-size: 25px;
+  opacity: 0.5;
+}
+
+.article .text {
+  margin: 0 0 0 275px;
+}
+
+.article .text span {
+  /* le span me permet de mettre en valeur certains éléments de mon texte*/
+  font-weight: 700;
+}
+
+.article img {
+  width: 250px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.article::after {
+  content: '';
+  display: block;
+  height: 1px;
+  margin: 20px 0;
+  background-color: rgb(88, 77, 65);
+  opacity: 0.3;
+}
+
+.aside {
+  width: 455px;
+  margin: 0;
+  padding: 20px 25px;
+  text-align: center;
+  color: rgb(88, 77, 65);
+  background-color: rgb(236, 233, 226);
+}
+
+.aside .aside-title {
+  font-family: Volkhov, serif;
+  font-size: 40px;
+  line-height: 1.3em;
+  /* l'utilisation de em comme unité de mesure c'es pour prendre la taille de la police de l'élément comme référence, si on change le font-size, le line-height s'adaptera en fonction*/
+  font-weight: 400;
+}
+
+.aside .aside-article {
+  font-family: montserrat, sans-serif;
+  font-size: 20px;
+  line-height: 1.6em;
+  text-align: justify;
+}
+
+.aside .aside-article span {
+  font-weight: 700;
+}
+
+.aside img:first-of-type {
+  /* la pseudo classe first-of type ou nth-of type me permet de sélectionner le premier ou le nième élément du type image dans mon conteneur aside*/
+  width: 190px;
+  height: auto;
+}
+
+.aside img:nth-of-type(2) {
+  width: 205px;
+  height: auto;
+}
+
+.footer {
+  font-size: 17px;
+  font-family: roboto, sans-serif;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  background-color: rgb(88, 77, 65);
+  height: 90px;
+  margin: 0;
+  padding: 35px;
+}

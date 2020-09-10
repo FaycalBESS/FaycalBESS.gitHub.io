@@ -1,0 +1,63 @@
+body {
+    background-color: black;
+}
+
+.container {
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    text-align: justify;
+    width: 85%;
+    max-width: 950px;
+    padding: 10px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin: auto;
+    border: 3px solid rgb(252, 211, 122);
+    border-radius: 20px;
+    background-color: rgb(115, 130, 160);
+}
+
+h1,
+h2 {
+    color: rgb(252, 211, 122);
+    font-family: Righteous;
+}
+
+.content {
+    padding: 10px;
+}
+
+p {
+    margin-top: 10px;
+    ;
+}
+
+.face {
+    /*margin-right: 20px;
+    shape-outside: circle();*/
+    float: left;
+    margin-right: 10px;
+}
+
+.mesJeux {
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+
+.twitter {
+    text-align: center;
+}
+
+.twitterAccount {
+    height: 350px;
+    border: 2px solid rgb(252, 211, 122);
+    border-radius: 8px;
+    display: inline-block;
+}
+
+span {
+    font-weight: bold;
+    color: rgb(252, 211, 122);
+}

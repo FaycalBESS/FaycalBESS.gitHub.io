@@ -1,0 +1,258 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    background-color: rgb(246, 244, 243);
+    font-family: roboto,
+        sans-serif;
+    color: rgb(88, 77, 65);
+}
+
+.header {
+    height: 50px;
+}
+
+.header .navbar-fixed {
+    background-color: rgb(255, 255, 255);
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row;
+    flex-flow: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    padding: 0 10.5% 0 10%;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+.navbar-fixed .social-media {
+    padding: 5px;
+}
+
+.navbar-fixed .menu {
+    padding: 15px;
+}
+
+.navbar-fixed .social-media a {
+    margin: 0 0 0 22px;
+    font-size: 40px;
+    color: inherit;
+    opacity: 0.7;
+}
+
+.navbar-fixed .menu a {
+    margin: 0 0 0 40px;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.7;
+}
+
+a:hover,
+a[href="#"] {
+    /* comportement des liens de la navbar au survol de la souris ET du lien de la page affichée qui possède un attribut href dont la valeur est # */
+    opacity: 1;
+    text-shadow: 0px 0px 2px rgb(0, 0, 0);
+}
+
+.main {
+    max-width: 1300px;
+    margin: auto;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 25px;
+}
+
+.article {
+    width: 100%;
+    text-align: center;
+}
+
+.article .article-title {
+    font-family: Volkhov, serif;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: left;
+    margin: 0;
+    margin-bottom: -25px
+}
+
+.article .article-subtitle {
+    font-family: Volkhov, serif;
+    font-size: 32px;
+    text-align: left;
+    opacity: .65;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.article .float {
+    margin: 25px 25px 25px 0;
+    float: left;
+}
+
+.article .no-float {
+    margin: 0;
+    margin-top: 25px;
+}
+
+.article .article-text {
+    font-size: 18px;
+    line-height: 1.4em;
+    text-align: justify;
+    padding-top: 17px;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+.article .article-text span {
+    font-weight: 500;
+}
+
+.article .article-media {
+    border: 1px solid rgb(88, 77, 65)
+}
+
+.article::after {
+    content: '';
+    display: block;
+    height: 1px;
+    margin: 20px 0;
+    background-color: rgba(88, 77, 65, .3);
+}
+
+.main-contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    margin-top: 20px;
+}
+
+.main-contact .formulaire {
+    width: calc(100% - 630px);
+    background-color: rgb(236, 233, 226);
+    border: 1px solid rgb(88, 77, 65);
+    margin-right: 15px;
+    padding: 0 15px;
+    font-size: 15px;
+    text-align: left;
+}
+
+.formulaire .form {
+    margin-top: 15px;
+}
+
+.form label {
+    display: inline-block;
+    width: 185px;
+}
+
+.form label:last-of-type {
+    /* la pseudo classe last-of-type me permet de sélection le dernier élément de type label du formulaire, j'ai besoin de le cibler précisément car pour les autres champs il a été attribué un padding à l'input mais comme ce label là n'a pas d'input sur la même ligne le design s'en voit altéré, la marge appliquée est l'addition du padding et de la marge des autres éléments (2 + 5px) */
+    margin-top: 7px;
+}
+
+label+input,
+/*pour cible précisément les inputs qui viennent après des labels, de telle sorte à ne pas sélectionner les boutons submit et effacer, la virgule me permet de sélectionner un autre élément, ici le textarea*/
+textarea {
+    width: 265px;
+    margin: 5px 22px 2px 0;
+    padding: 2px 10px;
+    font-family: inherit;
+    font-size: inherit;
+    font-style: italic;
+    color: rgb(170, 120, 67);
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgb(88, 77, 65);
+    transition: all .35s ease-out;
+}
+
+textarea {
+    width: 470px;
+    margin: 15px 0;
+    padding: 10px;
+}
+
+/* des précisions pour écraser certaines propréiéts du text aréa qui ont été définies plus haut, le CSS prenant en compte la dernière propriété indiquée*/
+
+label+input:focus,
+textarea:focus {
+    /* la pseudo class :focus indique les propriétés des éléments du formulaire quand ils sont sélectionnés*/
+    background-color: rgb(246, 244, 243);
+    outline: none;
+    border-bottom: 1px solid rgb(88, 77, 65);
+}
+
+.form .button {
+    width: 120px;
+    background: none;
+    border: 1px solid rgb(88, 77, 65);
+    border-radius: 4px;
+    margin-right: 5px;
+    padding: 5px;
+    font-family: inherit;
+    font-size: 13px;
+    color: inherit;
+    -webkit-transition: all .35s ease-out;
+    -o-transition: all .35s ease-out;
+    transition: all .35s ease-out;
+    cursor: pointer;
+    /* pourchanger le curseur de la souris au survol, pour renforcer l'effet bouton*/
+}
+
+.form .button:hover {
+    /*effet au survol*/
+    cursor: pointer;
+    /* pourchanger le curseur de la souris au survol, pour renforcer l'effet bouton*/
+    background: rgb(88, 77, 65);
+    border: 1px solid rgb(88, 77, 65);
+    color: rgb(255, 255, 255);
+}
+
+.adresse {
+    font-size: 15px;
+    font-style: normal;
+    line-height: 1.4em;
+    text-align: right;
+    border: 1px solid rgb(88, 77, 65);
+    padding: 10px;
+    margin-top: 10px;
+    background-color: rgb(236, 233, 226);
+}
+
+.adresse a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer {
+    font-size: 15px;
+    color: rgba(255, 255, 255, .5);
+    text-align: center;
+    background-color: rgb(88, 77, 65);
+    margin: 0;
+    margin-top: 0px;
+    padding: 7px;
+}

@@ -1,0 +1,132 @@
+.container {
+    width: 430px;
+    height: 475px;
+    background-color: #281496;
+    color: #E700FF;
+    margin: auto;
+    margin-top: 10px;
+    /*padding: 50px;*/
+    border: 3px solid #E700FF;
+    border-radius: 30px;
+    font-family: orbitron, "open Sans";
+}
+
+#score {
+    font-size: 12px;
+    margin: 15px;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#rndCnt {
+    font-size: 18px;
+    margin: 0px;
+    color: #F8B80A;
+    margin-top: -10px;
+    margin-bottom: 0px;
+}
+
+.donne {
+    width: 80%;
+    height: 175px;
+    text-align: center;
+    font-size: 22px;
+    margin-top: 0px;
+    margin: auto;
+}
+
+.jeux {
+    width: 80%;
+    height: 155px;
+    text-align: center;
+    font-size: 22px;
+    margin-top: 0px;
+    margin: auto;
+}
+
+#computer,
+#player2 {
+    margin: 0;
+}
+
+.jeux {
+    border-bottom: 2px solid #E700FF;
+
+}
+
+.ordi {
+    margin: 10px auto;
+}
+
+.greeting {
+    font-size: 12px;
+    color: #F8B80A;
+    font-family: 'Open Sans';
+    text-align: justify;
+}
+
+.lien {
+    display: inline-block;
+    width: 100%;
+    background-color: #F8B80A;
+    color: #281496;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 10px;
+    /*padding-right: 10px;
+    padding-left: 10px;*/
+    margin-top: 5px;
+    text-align: center;
+}
+
+#ordi_rock {
+    display: none;
+}
+
+#ordi_paper {
+    display: none;
+}
+
+#ordi_scisors {
+    display: none;
+}
+
+.gamer {
+    margin: 10px auto;
+}
+
+#gamer_rock {
+    display: none;
+}
+
+#gamer_paper {
+    display: none;
+}
+
+#gamer_scisors {
+    display: none;
+}
+
+.choix {
+    width: 80%;
+    text-align: center;
+    font-size: 12px;
+    padding: 0px;
+    margin: auto;
+    margin-top: 3px;
+}
+
+.picto {
+    margin: 5px;
+    border: 1px solid #F8B80A;
+    cursor: pointer;
+}
+
+.picto:hover {
+    scale: 1.1;
+}
+
+#choose {
+    margin-top: 0px;
+}

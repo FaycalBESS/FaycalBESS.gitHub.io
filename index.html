@@ -2,96 +2,161 @@
 <html lang="fr-FR">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My blog - FaycalBESS</title>
-  <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Righteous&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Commentaire 1, responsive design-->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <!-- la petite icone qui apparaîtra sur l'onglet du navigateur ou quand le site sera rajouté aux favoris-->
+    <link rel="stylesheet" href="style/index.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@400;500&family=Volkhov&display=swap"
+        rel="stylesheet">
+    <!-- J'intègre le lien vers le fichier CSS de google fonts pour utiliser des polices personnalisées -->
+    <script src="https://kit.fontawesome.com/5871652cc4.js" crossorigin="anonymous"></script>
+    <!-- lien vers le script Font Awesome me permettant d'utiliser une très grande palette d'icones-->
+    <title>Visite aux fonds de la Casbah d'Alger</title>
 </head>
 
 <body>
-  <div class="container">
-    <h1>About me :</h1>
-    <div class="contents">
-      <p class="textPrez" id="prez">
-        <img class="face" src="images/icon_Faycal.png" alt="FaycalBESS" width="110"
-          title="Je suis beau comme ça, non !!" />
-        Salut, je suis Fayçal.<br />
-        Je me suis (re) découvert une passion pour le code et je suis mon
-        petit
-        <span id="bonhomme">bonhomme 😉</span> de chemin en essayant
-        d'apprendre à coder, en suivant des tutoriaux, en faisant des
-        exercices et en regardant des heures et des heures de vidéos.<br />
-        Sur twitter
-        <a href="https://twitter.com/BessahFaycal?ref_src=twsrc%5Etfw" class="twitter-follow-button"
-          data-show-screen-name="false" data-show-count="false">Follow @BessahFaycal</a>
-        <script async src="https://platform.twitter.com/widgets.js"></script>
-        je suis tombé sur les hashtags #100DaysOfCode #CodeNewbies que
-        reprenait un challenge de jeunes développeurs en herbe qui se sont
-        donné 100 jours pour apprendre à coder sous différents environnements
-        et qui partageaient, chaque jour, leur avancement en publiant leurs
-        réalisations. Ça m'a boosté et motivé pour en faire de même.
-      </p>
-
-      <p class="textPrez" id="suite">
-        Une autre chose qui me motive énormément, c'est de partager les trucs
-        et astuces que j'ai appris et d'aider, à chaque fois que je peux le
-        faire, les gens qui sont autour de moi à avancer et à prendre du
-        plaisr en codant, tout comme moi j'en prends.
-      </p>
-      <p class="textPrez" id="suite2">
-        Peut-être Il y a sur twitter également une tendance de plus en plus
-        populiare parmi la communauté consistant à "tester" ses connaissances
-        en développant des jeux mêlant HTML, CSS et Javascript. je me suis
-        laissé également embarquer là-dedans, je créé cette page pour
-        répertorier, au fur et à mesure, les jeux que j'aurai réussi à
-        développer. Peut-être que cette page deviendra un jour mon blog
-        officiels, vous auriez été les premiers à la découvrir.
-      </p>
-      <p class="textPrez" id="suite3">
-        Pour finir, je mettrai en bas de la page quelques tweets ou des
-        comptes twitter que je follow et qui m'apprennent énormément tous les
-        jours.
-        <span id="keepCoding">So, keep Coding and never give up</span>
-      </p>
-    </div>
-    <h2>Mes jeux :</h2>
-    <div class="mesJeux">
-      <div class="jeux1">
-        <img src="images/premierJeux.png" alt="le jeux du Pierre, Papier, Ciseau" width="200" onclick='window.open("premierJeux/premierJeux.html",
-                    "Pierre, Papier, Ciseau",
-                    "scrollbars=no, menubar=no, toolbar=no, width=450,height=525")' />
-      </div>
-      <div class="jeux2">
-        <img src="images/plusGrand.png" alt="le jeux du : Plus grand / Plus petit" height="221" onclick='window.open("plusGrand/plusGrand.html", "Devinez le nombre caché",
-                    "scrollbars=no, menubar=no, toolbar=no, width=820, height=830")' />
-      </div>
-    </div>
-    <h2>Ma sélection de comptes à suivre :</h2>
-    <div class="twitter">
-      <div class="twitterAccount">
-        <a class="twitter-timeline" data-width="220" data-height="350"
-          href="https://twitter.com/DThompsonDev?ref_src=twsrc%5Etfw">Tweets by DThompsonDev</a>
-        <script async src="https://platform.twitter.com/widgets.js"></script>
-      </div>
-      <div class="twitterAccount">
-        <a class="twitter-timeline" data-width="220" data-height="350"
-          href="https://twitter.com/frontenddude?ref_src=twsrc%5Etfw">Tweets by frontenddude</a>
-        <script async src="https://platform.twitter.com/widgets.js"></script>
-      </div>
-      <div class="twitterAccount">
-        <a class="twitter-timeline" data-width="220" data-height="350"
-          href="https://twitter.com/ania_kubow?ref_src=twsrc%5Etfw">Tweets by ania_kubow</a>
-        <script async src="https://platform.twitter.com/widgets.js"></script>
-      </div>
-      <div class="twitterAccount">
-        <a class="twitter-timeline" data-width="220" data-height="350"
-          href="https://twitter.com/_kud?ref_src=twsrc%5Etfw">Tweets by _kud</a>
-        <script async src="https://platform.twitter.com/widgets.js"></script>
-      </div>
-    </div>
-  </div>
+    <header class="banniere">
+        <div class="logo">
+            <h1 class="banniere-title">La Casbah d'Alger</h1>
+            <p class="banniere-text">
+                Occupant une position stratégique sur un site exceptionnel, la Casbah constitue le noyau historique
+                du grand Alger.<br>
+                Son rôle dans le bassin méditerranéen, son histoire, le site exceptionnel qu’elle occupe, son
+                architecture et son urbanisme particuliers lui confèrent cet intérêt qui dépasse ses
+                frontières.<br>
+                Cette médina, traversant le temps et l’histoire nous raconte, aujourd’hui, sa culture riche, sa
+                manière de vivre et surtout, tout son savoir faire.
+            </p>
+        </div>
+        <nav class="navbar" id="navbar">
+            <div class="social-media">
+                <a href="https://www.youtube.com" title="Abonnez-vous à notre chaine Youtube"><i
+                        class="fab fa-youtube-square"></i></a>
+                <!--L'attribut title permet d'afficher une infobulle au survol de la souris pour donner plus de détails sur le lien-->
+                <a href="https://www.instagram.com" title="Suivez les stories postées par nos fans"><i
+                        class="fab fa-instagram-square"></i></a>
+                <a href="https://www.twitter.com" title="Les derniers tweets de nos followers"><i
+                        class="fab fa-twitter-square"></i></a>
+                <a href="https://www.facebook.com" title="Likez notre pages et recevez nos dernières news"><i
+                        class="fab fa-facebook-square"></i></a>
+                <a href="https://www.pinterest.com" title="Admirez les plus belles photos de la casbah"><i
+                        class="fab fa-pinterest-square"></i></a>
+            </div>
+            <div class="menu" id="menu">
+                <a href="#" title="Accueil">Accueil</a>
+                <a href="histoire.html" title="Histoire de la Casbah">Histoire</a>
+                <a href="visite.html" title="A la visite des sites et monuments de la médina">Visite Guidée</a>
+                <a href="contact.html" title="Joignez-vous à nous">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <main class="wrapper">
+        <div class="articles">
+            <h2 class="main-title">Aux origines de la ville</h2>
+            <div class="article">
+                <h3 class="article-title">Période Punique</h3>
+                <h4 class="article-subtitle">Époque Phénicienne</h4>
+                <p class="text">
+                    La première implantation humaine est supposée être un comptoir Phénicien, attestée par la
+                    découverte, en 1940,
+                    de pièces de monnaies en plomb et en bronze.<br>
+                    L’appellation donnée à ce site fut <span>ICOSIM</span> faisant partie du royaume de Maurétanie,
+                    gouverné par des
+                    rois berbères et signifiant <span>« îles des mouettes »</span>
+                </p>
+                <img src="https://picsum.photos/250/170" alt="Origines puniques de la ville">
+            </div>
+            <div class="article">
+                <h3 class="article-title">Période Romaine</h3>
+                <h4 class="article-subtitle">À partir du 1er siècle après J.C</h4>
+                <p class="text">
+                    Comme en témoigne le tracé Romain formé des deux axes structurant la ville, le
+                    <span>Cardo</span> & le <span>Decumanus</span> ainsi que la trame régulière orthogonale visible
+                    dans la partie basse de médina.<br>
+                    L’intersection du Cardo (axe structurant commercial) et du Decumanus (axe structurant
+                    territorial) est matérialisée par le <span>Forum</span> correspondant aujourd’hui a <span>la
+                        place des martyrs.</span><br>
+                    A cette époque le nom ICOSIM a été latinisé en <span>ICOSIUM.</span>
+                </p>
+                <img src="https://picsum.photos/250/170" alt="Origines puniques de la ville">
+            </div>
+            <div class="article">
+                <h3 class="article-title">Période Arabo Berbère</h3>
+                <h4 class="article-subtitle">EL DJAZAIR BENI MEZGHENA</h4>
+                <p class="text">
+                    En 960, la ville d’<span>El Djazair</span> fut fondée par <span>BOULOUGHINE IBN ZIRI</span> La
+                    première configuration de la ville est établie sur l’emplacement même d’ICOSIUM avec
+                    l’édification d’une nouvelle enceinte étendue à la partie haute de la casbah.<br>
+                    Contrairement à ce qui est souvent rapporté, la Médina date d’une période antérieure à la
+                    présence ottomane.
+                </p>
+                <img src="https://picsum.photos/250/170" alt="Origines puniques de la ville">
+            </div>
+            <!--L'attribut alt ajouté sur les images permet de mettre un text alternatif qui sera affiché en attendant le chargement de l'image et qui sera très utile pour les personne déficients visuellement ou utilisant une liseuse-->
+            <div class="article">
+                <h3 class="article-title">Période Ottomane</h3>
+                <h4 class="article-subtitle">À partir du XVI Siècle</h4>
+                <p class="text">
+                    A cette époque, El Djezair prit sa configuration définitive avec des caractéristiques urbaines,
+                    politiques, économiques et socioculturelles.<br>
+                    La ville, de <span>forme triangulaire,</span> délimitée par des remparts correspondants aux
+                    ravins délimitant le site au Nord et au Sud fut reliée à la <span>jetée Kheireddine.</span> Si
+                    la partie basse a maintenu les fonctions commerciales, économiques et d’échange, au sommet du
+                    triangle fut édifiée <span>la Citadelle</span> : place du pouvoir.
+                </p>
+                <img src="https://picsum.photos/250/170" alt="Origines puniques de la ville">
+            </div>
+            <div class="articles-media">
+                <video controls width="784" height="451" poster="images/rempartsCasbah.jpg">
+                    <!-- on peut inclure une vidéo locale avec la balise video, si on spécifie la taille, le navigateur gardera quand même les proportions -->
+                    <source src="images/videos/Casbah.webm" type="video/webm">
+                    <source src="images/videos/Casbah.mp4" type="video/mp4">
+                    <!-- la balise source permet d'indiquer plusieurs sources pour la vidéo, en fonction des compatibilité, le navigateur prendra la première source qu'il saura lire, webm doit cependant être indiquée en premier pour assurer une lecture sur les appareils iOS-->
+                    Oops, on dirait que votre navigateur ne peut pas lire les vidéos embarquées.<br>
+                    C'est pas grave, vous pouvez la télécharger <a href="images/videos/Casbah.mp4">ici</a>.
+                    <!-- un message qui s'indique dans le cas ou le navigateur ne peut lire aucune des sources fournies, dans ce cas, je propose au visiteur de télécharger la vidéo-->
+                </video>
+            </div>
+        </div>
+        <aside class="aside">
+            <h2 class="aside-title">Les Armoiries de la ville</h2>
+            <img src="images/armoiries.png" alt="Les armoiries de la ville">
+            <p class="aside-article"><span>Écu taillé d'azur et de sinople, bordé d'une filière
+                    d'or.</span><br>
+                <span>Le bateau</span> représente le commerce et l'activité maritime.<br>
+                <span>Les deux lions affrontés</span> symbolisent la force.<br>
+                <span>Le croissant et l'étoile</span> symbolisent les valeurs de la civilisation
+                arabo-musulmane.<br>
+                <span>La plume</span> pour le développement scientifique et culturel.<br>
+                <span>La gerbe de blé</span> pour la vocation première du pays (l'agriculture).<br>
+                <span>La roue</span> symbolise l'industrie.<br>
+                <span>Un fort de style ottoman</span> en guise de couronne murale.</p>
+            <h2 class="aside-title">Hussein Dey,<br> le coup de l’Eventail</h2>
+            <img src="images/coupEventail.jpg" alt="Scène illustrant le coupe de l'éventail">
+            <p class="aside-article">
+                Après une réunion contentieuse au cours de laquelle <span>l’ambassadeur de France à
+                    Alger</span>
+                refusa de donner des réponses satisfaisantes le 29 avril 1827 au sujet du retard accusé par
+                son pays
+                quant au payement du blé acheté auprès de négociants locaux, <span>le Dey le frappa</span>
+                avec un
+                chasse-mouches.<br>
+                <span>Charles X</span> usa de ce reproche contre son représentant diplomatique, pour exiger
+                d'abord
+                des excuses de la part du dey, et ensuite lancer un <span>blocus contre le port
+                    d'Alger</span> qui
+                abourira, le 5 juillet 1830, à <span>la colonisation de tout le pays.</span><br>
+                <span>Colonisation qui durera 138 ans durant...</span>
+            </p>
+        </aside>
+    </main>
+    <footer>
+        <p class="footer">Fayçal BESSAH - HTML & CSS - ESG-Executive e-Business & Stratégie Digitale - Nov. 2020</p>
+    </footer>
+    <script src="script.js"></script>
+    <!-- un petit script javascript permettant de fixer le menu en haut de la fenêtre au scroll, le script est inséré juste avant la balise fermante du body, de telle sorte que tous les éléments aient fini de se charger -->
 </body>
 
 </html>
