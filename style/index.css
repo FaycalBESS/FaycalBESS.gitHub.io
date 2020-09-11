@@ -1,3 +1,7 @@
+/*
+par défaut, j'essaye de prendre deux niveau de profondeur à chaque fois, cela me permet d'être assez précis sans être trop contraignant, je ne fais qu'exceptionnellement appel aux éléments html comme ça, en cas de changement de la structure html du site ou en cas de maintenance, je n'aurai pas ou que très peu de changements à effectuer
+*/
+
 * {
   -webkit-box-sizing: border-box;
   /* le préfix -webkit me permet de m'assurer que cette propriété sera comprise est interprété par les navigateurs basés sur le moteur de chrome */
@@ -23,12 +27,13 @@ html {
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-  /* swap : indique le comportement du navigateur en attendant le chargement de la police personnalisée */
+  /* l'utilisation ici du swap indique le comportement que j'attends du navigateur en attendant le chargement de la police personnalisée */
 }
 
 .banniere {
   height: 450px;
   background-image: -o-linear-gradient(top,
+      /* le préfixe -o pour assurer un affichage correcte sur le navigateur opéra*/
       rgb(0, 0, 0),
       rgba(196, 196, 196, 0) 116.86%),
     url('../images/banniereMosquee.jpg');
@@ -72,13 +77,11 @@ html {
 }
 
 .banniere .banniere-title {
-  /* Une précision supplémentaire dans le sélecteur, au cas ou*/
   margin: 0;
   width: 350px;
   position: relative;
-
   font-family: Aladin, serif;
-  /* police personnalisée et une police alternative à afficher en attendant ou en cas d'impossibilité du chargement de la première*/
+  /* police personnalisée et une police alternative à afficher en attendant le chargement ou en cas d'impossibilité du chargement de la première*/
   font-size: 90px;
   line-height: 128%;
   text-align: right;
@@ -87,7 +90,7 @@ html {
 }
 
 .banniere h1::after {
-  /*j'utilise un pseudo element pour éviter de polluer mon code HTML*/
+  /*j'utilise un pseudo element pour éviter de polluer mon code HTML pour insérer un élément purement visuel*/
   content: '';
   width: 1px;
   height: 315px;
@@ -325,6 +328,5 @@ a[href="#"] {
   text-align: center;
   background-color: rgb(88, 77, 65);
   margin: 0;
-  margin-top: 0px;
   padding: 7px;
 }

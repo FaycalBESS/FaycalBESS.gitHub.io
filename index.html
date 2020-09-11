@@ -13,11 +13,12 @@
     <!-- J'intègre le lien vers le fichier CSS de google fonts pour utiliser des polices personnalisées -->
     <script src="https://kit.fontawesome.com/5871652cc4.js" crossorigin="anonymous"></script>
     <!-- lien vers le script Font Awesome me permettant d'utiliser une très grande palette d'icones-->
-    <title>Visite aux fonds de la Casbah d'Alger</title>
+    <title>A la découverte de la Casbah d'Alger, le joyau de la méditerranée</title>
 </head>
 
 <body>
     <header class="banniere">
+        <!-- pour une bonne structuration de la page html, j'adopte un layout header/nav/main/aside/footer-->
         <div class="logo">
             <h1 class="banniere-title">La Casbah d'Alger</h1>
             <p class="banniere-text">
@@ -31,6 +32,7 @@
             </p>
         </div>
         <nav class="navbar" id="navbar">
+            <!-- l'utilisation d'un id ici, en plus de la classe me permet de cibler plus facilement l'élément en javascript même en lui changeant de classe-->
             <div class="social-media">
                 <a href="https://www.youtube.com" title="Abonnez-vous à notre chaine Youtube"><i
                         class="fab fa-youtube-square"></i></a>
@@ -43,6 +45,7 @@
                         class="fab fa-facebook-square"></i></a>
                 <a href="https://www.pinterest.com" title="Admirez les plus belles photos de la casbah"><i
                         class="fab fa-pinterest-square"></i></a>
+                <!-- l'élément i (pour icone) me permet d'insérer les icones de Font Awesome dont le script à été attaché dans le head (ligne 14) -->
             </div>
             <div class="menu" id="menu">
                 <a href="#" title="Accueil">Accueil</a>
@@ -55,6 +58,7 @@
     <main class="wrapper">
         <div class="articles">
             <h2 class="main-title">Aux origines de la ville</h2>
+            <!-- pour les besoin SEO, il n'est utilisé qu'un seul titre h1 dans la page, j'utilise d'autres niveaux de titre pour le reste du document-->
             <div class="article">
                 <h3 class="article-title">Période Punique</h3>
                 <h4 class="article-subtitle">Époque Phénicienne</h4>
@@ -65,8 +69,9 @@
                     L’appellation donnée à ce site fut <span>ICOSIM</span> faisant partie du royaume de Maurétanie,
                     gouverné par des
                     rois berbères et signifiant <span>« îles des mouettes »</span>
+                    <!-- l'utilisation du span me permet de mettre en évidence certain passage du texte, le span sera stylisé en CSS-->
                 </p>
-                <img src="https://picsum.photos/250/170" alt="Origines puniques de la ville">
+                <img src="images/punique.jpg" alt="Comptoire Phénicien dans la méditerranée">
             </div>
             <div class="article">
                 <h3 class="article-title">Période Romaine</h3>
@@ -80,7 +85,7 @@
                         place des martyrs.</span><br>
                     A cette époque le nom ICOSIM a été latinisé en <span>ICOSIUM.</span>
                 </p>
-                <img src="https://picsum.photos/250/170" alt="Origines puniques de la ville">
+                <img src="images/romaine.jpg" alt="Des traces d'une structuration romaine de la ville">
             </div>
             <div class="article">
                 <h3 class="article-title">Période Arabo Berbère</h3>
@@ -92,7 +97,7 @@
                     Contrairement à ce qui est souvent rapporté, la Médina date d’une période antérieure à la
                     présence ottomane.
                 </p>
-                <img src="https://picsum.photos/250/170" alt="Origines puniques de la ville">
+                <img src="images/araboBerbere.jpg" alt="Naissance du nom actuel de la ville d'Alger">
             </div>
             <!--L'attribut alt ajouté sur les images permet de mettre un text alternatif qui sera affiché en attendant le chargement de l'image et qui sera très utile pour les personne déficients visuellement ou utilisant une liseuse-->
             <div class="article">
@@ -106,14 +111,15 @@
                     la partie basse a maintenu les fonctions commerciales, économiques et d’échange, au sommet du
                     triangle fut édifiée <span>la Citadelle</span> : place du pouvoir.
                 </p>
-                <img src="https://picsum.photos/250/170" alt="Origines puniques de la ville">
+                <img src="images/ottomane.jpg" alt="Rattachement de la casbah à la porte suprême à Istanbul">
             </div>
             <div class="articles-media">
                 <video controls width="784" height="451" poster="images/rempartsCasbah.jpg">
                     <!-- on peut inclure une vidéo locale avec la balise video, si on spécifie la taille, le navigateur gardera quand même les proportions -->
                     <source src="images/videos/Casbah.webm" type="video/webm">
                     <source src="images/videos/Casbah.mp4" type="video/mp4">
-                    <!-- la balise source permet d'indiquer plusieurs sources pour la vidéo, en fonction des compatibilité, le navigateur prendra la première source qu'il saura lire, webm doit cependant être indiquée en premier pour assurer une lecture sur les appareils iOS-->
+                    <!-- la balise source permet d'indiquer plusieurs sources pour la vidéo, en fonction des compatibilité, le navigateur prendra la première source qu'il saura lire, webm doit cependant être indiquée en premier pour assurer une lecture sur les appareils iOS
+                    pour respecter la consigne relative à la taille du dossier à remettre, je liste ici le lien de la vidéo en mp4 mais je ne l'incluerai pas dans le zip car elle fait à elle seule 91Mo -->
                     Oops, on dirait que votre navigateur ne peut pas lire les vidéos embarquées.<br>
                     C'est pas grave, vous pouvez la télécharger <a href="images/videos/Casbah.mp4">ici</a>.
                     <!-- un message qui s'indique dans le cas ou le navigateur ne peut lire aucune des sources fournies, dans ce cas, je propose au visiteur de télécharger la vidéo-->
