@@ -137,7 +137,7 @@ html {
   font-size: 20px;
   font-weight: 500;
   text-decoration: none;
-  /* pour ne pas appliquer le style par défaut des liens */
+  /* pour ne pas appliquer le style par défaut des liens (bleu, souligné) */
   color: inherit;
   opacity: 0.7;
 }
@@ -182,7 +182,6 @@ a[href="#"] {
 .banniere .navbar-fixed {
   /* la classe qui sera ajoutée et qui remplacera la classe par défaut*/
   background-color: rgb(255, 255, 255);
-  color: #584d41;
   height: 50px;
   width: 100%;
   position: fixed;
