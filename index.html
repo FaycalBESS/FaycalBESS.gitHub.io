@@ -1,264 +1,210 @@
 <!DOCTYPE html>
 <html lang="fr-FR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Pour un meilleur affichage sur les écrans mobile, la balise meta viewport ainsi formulée permet d'indiquer que le width correspond à la largeur de l'écran du terminal -->
 
-    <meta name="description" content="" />
-    <!--La description qui permettra aux moteurs de recherche de mieux indexer mon site-->
+<head>
+  <meta property="og:title" content="A la découverte de la Casbah d'Alger, Véritable joyau de la méditerranée " />
+  <meta property="og:site_name" content="La Casbah d'Alger" />
+  <meta property="og:url" content="https://faycalbess.github.io" />
+  <meta property="og:description"
+    content="Son rôle dans le bassin méditerranéen, son histoire, le baie qu'elle surplombe, son architecture et son urbanisme particuliers confèrent à la Casbah cet intérêt qui dépasse les frontières" />
+  <meta property="og:type" content="place" />
+  <meta property="og:image" content="https://faycalbess.github.io/images/banniereMosqueeOGP.jpg" />
+  <!--Les balises méta property="og..." de opengraph permette de maitriser l'apperçu qu'aura le site quand il est partagé sur les réseaux sociaux (affichage d'une miniature, d'informations succintes etc)  -->
 
-    <meta
-      property="og:title"
-      content="A la découverte de la Casbah d'Alger, Véritable joyau de la méditerranée "
-    />
-    <meta property="og:site_name" content="La Casbah d'Alger" />
-    <meta property="og:url" content="https://faycalbess.github.io" />
-    <meta
-      property="og:description"
-      content="Son rôle dans le bassin méditerranéen, son histoire, le baie qu'elle surplombe, son architecture et son urbanisme particuliers confèrent à la Casbah cet intérêt qui dépasse les frontières"
-    />
-    <meta property="og:type" content="place" />
-    <meta
-      property="og:image"
-      content="https://faycalbess.github.io/images/banniereMosqueeOGP.jpg"
-    />
-    <!--Les balises méta property="og..." de opengraph permette de maitriser l'apperçu qu'aura le site quand il est partagé sur les réseaux sociaux (affichage d'une miniature, d'informations succintes etc)  -->
 
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-    <!-- la petite icone qui apparaîtra sur l'onglet du navigateur ou quand le site sera rajouté aux favoris-->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Pour un meilleur affichage sur les écrans mobile, la balise meta viewport ainsi formulée permet d'indiquer que le width correspond à la largeur de l'écran du terminal -->
 
-    <link rel="stylesheet" href="style/index.css" />
-    <!-- je link ma feuille de style CSS-->
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+  <!-- la petite icone qui apparaîtra sur l'onglet du navigateur ou quand le site sera rajouté aux favoris-->
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@400;500&family=Volkhov&display=swap"
-      rel="stylesheet"
-    />
-    <!-- J'intègre le lien vers le fichier CSS de google fonts pour utiliser des polices personnalisées -->
+  <link rel="stylesheet" href="style/index.css" />
+  <!-- je link ma feuille de style CSS-->
 
-    <script
-      src="https://kit.fontawesome.com/5871652cc4.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- lien vers le script Font Awesome me permettant d'utiliser une très grande palette d'icones-->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@400;500&family=Volkhov&display=swap"
+    rel="stylesheet" />
+  <!-- J'intègre le lien vers le fichier CSS de google fonts pour utiliser des polices personnalisées -->
 
-    <title>
-      A la découverte de la Casbah d'Alger, Véritable joyau de la méditerranée
-    </title>
-    <!--Le title qui sera repris sur l'onglet du navigateur et dans les SERP-->
+  <script src="https://kit.fontawesome.com/5871652cc4.js" crossorigin="anonymous"></script>
+  <!-- lien vers le script Font Awesome me permettant d'utiliser une très grande palette d'icones-->
 
-    <meta
-      name="description"
-      content="Véritable joyau de la méditerrannée, héritière d'une histoire millénaire, la Casbah d'Alger s'érige sur la baie d'Alger,  laissant très facilement entrevoir, à qui le souhaite, tout son charme et sa magie d'antant"
-    />
-    <!--La description qui permettra aux moteurs de recherche de mieux indexer mon site (doit être placée après la balise title) -->
-  </head>
+  <title>
+    A la découverte de la Casbah d'Alger, Véritable joyau de la méditerranée
+  </title>
+  <!--Le title qui sera repris sur l'onglet du navigateur et dans les SERP-->
 
-  <body>
-    <header class="banniere">
-      <!-- pour une bonne structuration de la page html, j'adopte un layout header/nav/main/aside/footer-->
-      <div class="logo">
-        <h1 class="banniere-title">La Casbah d'Alger</h1>
-        <p class="banniere-text">
-          Occupant une position stratégique sur un site exceptionnel, la Casbah
-          constitue le noyau historique du grand Alger.<br />
-          Son rôle dans le bassin méditerranéen, son histoire, le site
-          exceptionnel qu’elle occupe, son architecture et son urbanisme
-          particuliers lui confèrent cet intérêt qui dépasse ses frontières.<br />
-          Cette médina, traversant le temps et l’histoire nous raconte,
-          aujourd’hui, sa culture riche, sa manière de vivre et surtout, tout
-          son savoir faire.
-        </p>
-      </div>
-      <nav class="navbar" id="navbar">
-        <!-- l'utilisation d'un id ici, en plus de la classe me permet de cibler plus facilement l'élément en javascript même en lui changeant de classe-->
-        <div class="social-media">
-          <a
-            href="https://www.youtube.com"
-            title="Abonnez-vous à notre chaine Youtube"
-            ><i class="fab fa-youtube-square"></i
-          ></a>
-          <!--L'attribut title permet d'afficher une infobulle au survol de la souris pour donner plus de détails sur le lien-->
-          <a
-            href="https://www.instagram.com"
-            title="Suivez les stories postées par nos fans"
-            ><i class="fab fa-instagram-square"></i
-          ></a>
-          <a
-            href="https://www.twitter.com"
-            title="Les derniers tweets de nos followers"
-            ><i class="fab fa-twitter-square"></i
-          ></a>
-          <a
-            href="https://www.facebook.com"
-            title="Likez notre pages et recevez nos dernières news"
-            ><i class="fab fa-facebook-square"></i
-          ></a>
-          <a
-            href="https://www.pinterest.com"
-            title="Admirez les plus belles photos de la casbah"
-            ><i class="fab fa-pinterest-square"></i
-          ></a>
-          <!-- l'élément i (pour icone) me permet d'insérer les icones de Font Awesome dont le script à été attaché dans le head (ligne 14) -->
-        </div>
-        <div class="menu" id="menu">
-          <a href="#" title="Accueil">Accueil</a>
-          <a href="histoire.html" title="Histoire de la Casbah">Histoire</a>
-          <a
-            href="visite.html"
-            title="A la visite des sites et monuments de la médina"
-            >Visite Guidée</a
-          >
-          <a href="contact.html" title="Joignez-vous à nous">Contact</a>
-        </div>
-      </nav>
-    </header>
-    <main class="wrapper">
-      <div class="articles">
-        <h2 class="main-title">Aux origines de la ville</h2>
-        <!-- pour les besoin SEO, il n'est utilisé qu'un seul titre h1 dans la page, j'utilise d'autres niveaux de titre pour le reste du document-->
-        <div class="article">
-          <h3 class="article-title">Période Punique</h3>
-          <h4 class="article-subtitle">Époque Phénicienne</h4>
-          <p class="text">
-            La première implantation humaine est supposée être un comptoir
-            Phénicien, attestée par la découverte, en 1940, de pièces de
-            monnaies en plomb et en bronze.<br />
-            L’appellation donnée à ce site fut <span>ICOSIM</span> faisant
-            partie du royaume de Maurétanie, gouverné par des rois berbères et
-            signifiant <span>« îles des mouettes »</span>
-            <!-- l'utilisation du span me permet de mettre en évidence certain passage du texte, le span sera stylisé en CSS-->
-          </p>
-          <img
-            src="images/punique.jpg"
-            alt="Comptoire Phénicien dans la méditerranée"
-          />
-        </div>
-        <div class="article">
-          <h3 class="article-title">Période Romaine</h3>
-          <h4 class="article-subtitle">À partir du 1er siècle après J.C</h4>
-          <p class="text">
-            Comme en témoigne le tracé Romain formé des deux axes structurant la
-            ville, le
-            <span>Cardo</span> & le <span>Decumanus</span> ainsi que la trame
-            régulière orthogonale visible dans la partie basse de médina.<br />
-            L’intersection du Cardo (axe structurant commercial) et du Decumanus
-            (axe structurant territorial) est matérialisée par le
-            <span>Forum</span> correspondant aujourd’hui a
-            <span>la place des martyrs.</span><br />
-            A cette époque le nom ICOSIM a été latinisé en <span>ICOSIUM.</span>
-          </p>
-          <img
-            src="images/romaine.jpg"
-            alt="Des traces d'une structuration romaine de la ville"
-          />
-        </div>
-        <div class="article">
-          <h3 class="article-title">Période Arabo Berbère</h3>
-          <h4 class="article-subtitle">EL DJAZAIR BENI MEZGHENA</h4>
-          <p class="text">
-            En 960, la ville d’<span>El Djazair</span> fut fondée par
-            <span>BOULOUGHINE IBN ZIRI</span> La première configuration de la
-            ville est établie sur l’emplacement même d’ICOSIUM avec
-            l’édification d’une nouvelle enceinte étendue à la partie haute de
-            la casbah.<br />
-            Contrairement à ce qui est souvent rapporté, la Médina date d’une
-            période antérieure à la présence ottomane.
-          </p>
-          <img
-            src="images/araboBerbere.jpg"
-            alt="Naissance du nom actuel de la ville d'Alger"
-          />
-        </div>
-        <!--L'attribut alt ajouté sur les images permet de mettre un text alternatif qui sera affiché en attendant le chargement de l'image et qui sera très utile pour les personne déficients visuellement ou utilisant une liseuse-->
-        <div class="article">
-          <h3 class="article-title">Période Ottomane</h3>
-          <h4 class="article-subtitle">À partir du XVI Siècle</h4>
-          <p class="text">
-            A cette époque, El Djezair prit sa configuration définitive avec des
-            caractéristiques urbaines, politiques, économiques et
-            socioculturelles.<br />
-            La ville, de <span>forme triangulaire,</span> délimitée par des
-            remparts correspondants aux ravins délimitant le site au Nord et au
-            Sud fut reliée à la <span>jetée Kheireddine.</span> Si la partie
-            basse a maintenu les fonctions commerciales, économiques et
-            d’échange, au sommet du triangle fut édifiée
-            <span>la Citadelle</span> : place du pouvoir.
-          </p>
-          <img
-            src="images/ottomane.jpg"
-            alt="Rattachement de la casbah à la porte suprême à Istanbul"
-          />
-        </div>
-        <div class="articles-media">
-          <video
-            controls
-            width="784"
-            height="451"
-            poster="images/rempartsCasbah.jpg"
-          >
-            <!-- on peut inclure une vidéo locale avec la balise video, si on spécifie la taille, le navigateur gardera quand même les proportions -->
-            <source src="images/videos/Casbah.webm" type="video/webm" />
-            <source src="images/videos/Casbah.mp4" type="video/mp4" />
-            <!-- la balise source permet d'indiquer plusieurs sources pour la vidéo, en fonction des compatibilité, le navigateur prendra la première source qu'il saura lire, webm doit cependant être indiquée en premier pour assurer une lecture sur les appareils iOS
-                    pour respecter la consigne relative à la taille du dossier à remettre, je liste ici le lien de la vidéo en mp4 mais je ne l'incluerai pas dans le zip car elle fait à elle seule 91Mo -->
-            Oops, on dirait que votre navigateur ne peut pas lire les vidéos
-            embarquées.<br />
-            C'est pas grave, vous pouvez la télécharger
-            <a href="images/videos/Casbah.mp4">ici</a>.
-            <!-- un message qui s'indique dans le cas ou le navigateur ne peut lire aucune des sources fournies, dans ce cas, je propose au visiteur de télécharger la vidéo-->
-          </video>
-        </div>
-      </div>
-      <aside class="aside">
-        <h2 class="aside-title">Les Armoiries de la ville</h2>
-        <img src="images/armoiries.png" alt="Les armoiries de la ville" />
-        <p class="aside-article">
-          <span>Écu taillé d'azur et de sinople, bordé d'une filière d'or.</span
-          ><br />
-          <span>Le bateau</span> représente le commerce et l'activité
-          maritime.<br />
-          <span>Les deux lions affrontés</span> symbolisent la force.<br />
-          <span>Le croissant et l'étoile</span> symbolisent les valeurs de la
-          civilisation arabo-musulmane.<br />
-          <span>La plume</span> pour le développement scientifique et
-          culturel.<br />
-          <span>La gerbe de blé</span> pour la vocation première du pays
-          (l'agriculture).<br />
-          <span>La roue</span> symbolise l'industrie.<br />
-          <span>Un fort de style ottoman</span> en guise de couronne murale.
-        </p>
-        <h2 class="aside-title">
-          Hussein Dey,<br />
-          le coup de l’Eventail
-        </h2>
-        <img
-          src="images/coupEventail.jpg"
-          alt="Scène illustrant le coupe de l'éventail"
-        />
-        <p class="aside-article">
-          Après une réunion contentieuse au cours de laquelle
-          <span>l’ambassadeur de France à Alger</span> refusa de donner des
-          réponses satisfaisantes le 29 avril 1827 au sujet du retard accusé par
-          son pays quant au payement du blé acheté auprès de négociants locaux,
-          <span>le Dey le frappa</span> avec un chasse-mouches.<br />
-          <span>Charles X</span> usa de ce reproche contre son représentant
-          diplomatique, pour exiger d'abord des excuses de la part du dey, et
-          ensuite lancer un <span>blocus contre le port d'Alger</span> qui
-          abourira, le 5 juillet 1830, à
-          <span>la colonisation de tout le pays.</span><br />
-          <span>Colonisation qui durera 138 ans durant...</span>
-        </p>
-      </aside>
-    </main>
-    <footer>
-      <p class="footer">
-        Fayçal BESSAH - HTML & CSS - ESG-Executive e-Business & Stratégie
-        Digitale - Nov. 2020
+  <meta name="description"
+    content="Véritable joyau de la méditerrannée, héritière d'une histoire millénaire, la Casbah d'Alger s'érige sur la baie d'Alger,  laissant très facilement entrevoir, à qui le souhaite, tout son charme et sa magie d'antant" />
+  <!--La description qui permettra aux moteurs de recherche de mieux indexer mon site (doit être placée après la balise title) -->
+</head>
+
+<body>
+  <header class="banniere">
+    <!-- pour une bonne structuration de la page html, j'adopte un layout header/nav/main/aside/footer-->
+    <div class="logo">
+      <h1 class="banniere-title">La Casbah d'Alger</h1>
+      <p class="banniere-text">
+        Occupant une position stratégique sur un site exceptionnel, la Casbah
+        constitue le noyau historique du grand Alger.<br />
+        Son rôle dans le bassin méditerranéen, son histoire, le site
+        exceptionnel qu’elle occupe, son architecture et son urbanisme
+        particuliers lui confèrent cet intérêt qui dépasse ses frontières.<br />
+        Cette médina, traversant le temps et l’histoire nous raconte,
+        aujourd’hui, sa culture riche, sa manière de vivre et surtout, tout
+        son savoir faire.
       </p>
-    </footer>
-    <script src="script.js"></script>
-    <!-- un petit script javascript permettant de fixer le menu en haut de la fenêtre au scroll, le script est inséré juste avant la balise fermante du body, de telle sorte que tous les éléments aient fini de se charger -->
-  </body>
+    </div>
+    <nav class="navbar" id="navbar">
+      <!-- l'utilisation d'un id ici, en plus de la classe me permet de cibler plus facilement l'élément en javascript même en lui changeant de classe-->
+      <div class="social-media">
+        <a href="https://www.youtube.com" title="Abonnez-vous à notre chaine Youtube"><i
+            class="fab fa-youtube-square"></i></a>
+        <!--L'attribut title permet d'afficher une infobulle au survol de la souris pour donner plus de détails sur le lien-->
+        <a href="https://www.instagram.com" title="Suivez les stories postées par nos fans"><i
+            class="fab fa-instagram-square"></i></a>
+        <a href="https://www.twitter.com" title="Les derniers tweets de nos followers"><i
+            class="fab fa-twitter-square"></i></a>
+        <a href="https://www.facebook.com" title="Likez notre pages et recevez nos dernières news"><i
+            class="fab fa-facebook-square"></i></a>
+        <a href="https://www.pinterest.com" title="Admirez les plus belles photos de la casbah"><i
+            class="fab fa-pinterest-square"></i></a>
+        <!-- l'élément i (pour icone) me permet d'insérer les icones de Font Awesome dont le script à été attaché dans le head (ligne 14) -->
+      </div>
+      <div class="menu" id="menu">
+        <a href="#" title="Accueil">Accueil</a>
+        <a href="histoire.html" title="Histoire de la Casbah">Histoire</a>
+        <a href="visite.html" title="A la visite des sites et monuments de la médina">Visite Guidée</a>
+        <a href="contact.html" title="Joignez-vous à nous">Contact</a>
+      </div>
+    </nav>
+  </header>
+  <main class="wrapper">
+    <div class="articles">
+      <h2 class="main-title">Aux origines de la ville</h2>
+      <!-- pour les besoin SEO, il n'est utilisé qu'un seul titre h1 dans la page, j'utilise d'autres niveaux de titre pour le reste du document-->
+      <div class="article">
+        <h3 class="article-title">Période Punique</h3>
+        <h4 class="article-subtitle">Époque Phénicienne</h4>
+        <p class="text">
+          La première implantation humaine est supposée être un comptoir
+          Phénicien, attestée par la découverte, en 1940, de pièces de
+          monnaies en plomb et en bronze.<br />
+          L’appellation donnée à ce site fut <span>ICOSIM</span> faisant
+          partie du royaume de Maurétanie, gouverné par des rois berbères et
+          signifiant <span>« îles des mouettes »</span>
+          <!-- l'utilisation du span me permet de mettre en évidence certain passage du texte, le span sera stylisé en CSS-->
+        </p>
+        <img src="images/punique.jpg" alt="Comptoire Phénicien dans la méditerranée" />
+      </div>
+      <div class="article">
+        <h3 class="article-title">Période Romaine</h3>
+        <h4 class="article-subtitle">À partir du 1er siècle après J.C</h4>
+        <p class="text">
+          Comme en témoigne le tracé Romain formé des deux axes structurant la
+          ville, le
+          <span>Cardo</span> & le <span>Decumanus</span> ainsi que la trame
+          régulière orthogonale visible dans la partie basse de médina.<br />
+          L’intersection du Cardo (axe structurant commercial) et du Decumanus
+          (axe structurant territorial) est matérialisée par le
+          <span>Forum</span> correspondant aujourd’hui a
+          <span>la place des martyrs.</span><br />
+          A cette époque le nom ICOSIM a été latinisé en <span>ICOSIUM.</span>
+        </p>
+        <img src="images/romaine.jpg" alt="Des traces d'une structuration romaine de la ville" />
+      </div>
+      <div class="article">
+        <h3 class="article-title">Période Arabo Berbère</h3>
+        <h4 class="article-subtitle">EL DJAZAIR BENI MEZGHENA</h4>
+        <p class="text">
+          En 960, la ville d’<span>El Djazair</span> fut fondée par
+          <span>BOULOUGHINE IBN ZIRI</span> La première configuration de la
+          ville est établie sur l’emplacement même d’ICOSIUM avec
+          l’édification d’une nouvelle enceinte étendue à la partie haute de
+          la casbah.<br />
+          Contrairement à ce qui est souvent rapporté, la Médina date d’une
+          période antérieure à la présence ottomane.
+        </p>
+        <img src="images/araboBerbere.jpg" alt="Naissance du nom actuel de la ville d'Alger" />
+      </div>
+      <!--L'attribut alt ajouté sur les images permet de mettre un text alternatif qui sera affiché en attendant le chargement de l'image et qui sera très utile pour les personne déficients visuellement ou utilisant une liseuse-->
+      <div class="article">
+        <h3 class="article-title">Période Ottomane</h3>
+        <h4 class="article-subtitle">À partir du XVI Siècle</h4>
+        <p class="text">
+          A cette époque, El Djezair prit sa configuration définitive avec des
+          caractéristiques urbaines, politiques, économiques et
+          socioculturelles.<br />
+          La ville, de <span>forme triangulaire,</span> délimitée par des
+          remparts correspondants aux ravins délimitant le site au Nord et au
+          Sud fut reliée à la <span>jetée Kheireddine.</span> Si la partie
+          basse a maintenu les fonctions commerciales, économiques et
+          d’échange, au sommet du triangle fut édifiée
+          <span>la Citadelle</span> : place du pouvoir.
+        </p>
+        <img src="images/ottomane.jpg" alt="Rattachement de la casbah à la porte suprême à Istanbul" />
+      </div>
+      <div class="articles-media">
+        <video controls width="784" height="451" poster="images/rempartsCasbah.jpg">
+          <!-- on peut inclure une vidéo locale avec la balise video, si on spécifie la taille, le navigateur gardera quand même les proportions -->
+          <source src="images/videos/Casbah.webm" type="video/webm" />
+          <source src="images/videos/Casbah.mp4" type="video/mp4" />
+          <!-- la balise source permet d'indiquer plusieurs sources pour la vidéo, en fonction des compatibilité, le navigateur prendra la première source qu'il saura lire, webm doit cependant être indiquée en premier pour assurer une lecture sur les appareils iOS
+                    pour respecter la consigne relative à la taille du dossier à remettre, je liste ici le lien de la vidéo en mp4 mais je ne l'incluerai pas dans le zip car elle fait à elle seule 91Mo -->
+          Oops, on dirait que votre navigateur ne peut pas lire les vidéos
+          embarquées.<br />
+          C'est pas grave, vous pouvez la télécharger
+          <a href="images/videos/Casbah.mp4">ici</a>.
+          <!-- un message qui s'indique dans le cas ou le navigateur ne peut lire aucune des sources fournies, dans ce cas, je propose au visiteur de télécharger la vidéo-->
+        </video>
+      </div>
+    </div>
+    <aside class="aside">
+      <h2 class="aside-title">Les Armoiries de la ville</h2>
+      <img src="images/armoiries.png" alt="Les armoiries de la ville" />
+      <p class="aside-article">
+        <span>Écu taillé d'azur et de sinople, bordé d'une filière d'or.</span><br />
+        <span>Le bateau</span> représente le commerce et l'activité
+        maritime.<br />
+        <span>Les deux lions affrontés</span> symbolisent la force.<br />
+        <span>Le croissant et l'étoile</span> symbolisent les valeurs de la
+        civilisation arabo-musulmane.<br />
+        <span>La plume</span> pour le développement scientifique et
+        culturel.<br />
+        <span>La gerbe de blé</span> pour la vocation première du pays
+        (l'agriculture).<br />
+        <span>La roue</span> symbolise l'industrie.<br />
+        <span>Un fort de style ottoman</span> en guise de couronne murale.
+      </p>
+      <h2 class="aside-title">
+        Hussein Dey,<br />
+        le coup de l’Eventail
+      </h2>
+      <img src="images/coupEventail.jpg" alt="Scène illustrant le coupe de l'éventail" />
+      <p class="aside-article">
+        Après une réunion contentieuse au cours de laquelle
+        <span>l’ambassadeur de France à Alger</span> refusa de donner des
+        réponses satisfaisantes le 29 avril 1827 au sujet du retard accusé par
+        son pays quant au payement du blé acheté auprès de négociants locaux,
+        <span>le Dey le frappa</span> avec un chasse-mouches.<br />
+        <span>Charles X</span> usa de ce reproche contre son représentant
+        diplomatique, pour exiger d'abord des excuses de la part du dey, et
+        ensuite lancer un <span>blocus contre le port d'Alger</span> qui
+        abourira, le 5 juillet 1830, à
+        <span>la colonisation de tout le pays.</span><br />
+        <span>Colonisation qui durera 138 ans durant...</span>
+      </p>
+    </aside>
+  </main>
+  <footer>
+    <p class="footer">
+      Fayçal BESSAH - HTML & CSS - ESG-Executive e-Business & Stratégie
+      Digitale - Nov. 2020
+    </p>
+  </footer>
+  <script src="script.js"></script>
+  <!-- un petit script javascript permettant de fixer le menu en haut de la fenêtre au scroll, le script est inséré juste avant la balise fermante du body, de telle sorte que tous les éléments aient fini de se charger -->
+</body>
+
 </html>
