@@ -1,10 +1,13 @@
 /*
+
 par défaut, j'essaye de prendre deux niveau de profondeur à chaque fois, cela me permet d'être assez précis sans être trop contraignant, je ne fais qu'exceptionnellement appel aux éléments html comme ça, en cas de changement de la structure html du site ou en cas de maintenance, je n'aurai pas ou que très peu de changements à effectuer
+
+certaines prorpriétés ne sont pas encore entièrement prises en charges par l'ensemble des navigateurs, c'est pour ça que j'utilise des prefixes -webkit- (pour chrome) -O- (pour opéra) -ms- (pour edge et internet explorer) avec des noms de propriétés spécifiques à chacun des navigateurs (j'utilise une extension : auto-prefixer pour cela)
+
 */
 
 * {
   -webkit-box-sizing: border-box;
-  /* le préfix -webkit me permet de m'assurer que cette propriété sera comprise est interprété par les navigateurs basés sur le moteur de chrome */
   box-sizing: border-box;
   /* pour me permettre de dimensionner et de positionner mes éléments sans trop de calculs complexes, les marges intérieures et extérieurs étant comprises dans la taille indiquée*/
 }
@@ -12,13 +15,17 @@ par défaut, j'essaye de prendre deux niveau de profondeur à chaque fois, cela 
 body,
 html {
   margin: 0;
+  font-family: Roboto,
+    sans-serif;
+  font-size: 17px;
+  line-height: 1.4;
   color: rgb(88, 77, 65);
   background-color: rgb(246, 244, 243);
   /* propriétés globales de la page */
 }
 
 @font-face {
-  /* j'intègre les polices personnalisées utilisées dans mon design avec support des principaux navigateurs*/
+  /* j'intègre les polices personnalisées utilisées dans mon design en différentes extensions pour supporter les principaux navigateurs*/
   font-family: 'Aladin';
   src: url('Aladin-Regular.eot');
   src: url('../fonts/Aladin-Regular.eot?#iefix') format('embedded-opentype'),
@@ -31,16 +38,15 @@ html {
 }
 
 .banniere {
-  height: 450px;
-  background-image: -o-linear-gradient(top,
-      /* le préfixe -o pour assurer un affichage correcte sur le navigateur opéra*/
-      rgb(0, 0, 0),
-      rgba(196, 196, 196, 0) 116.86%),
-    url('../images/banniereMosquee.jpg');
+  height: 360px;
   background-image: -webkit-gradient(linear,
       left top, left bottom,
       from(rgb(0, 0, 0)),
       color-stop(116.86%, rgba(196, 196, 196, 0))),
+    url('../images/banniereMosquee.jpg');
+  background-image: -o-linear-gradient(top,
+      rgb(0, 0, 0),
+      rgba(196, 196, 196, 0) 116.86%),
     url('../images/banniereMosquee.jpg');
   background-image: linear-gradient(180deg,
       rgb(0, 0, 0),
@@ -50,26 +56,27 @@ html {
   background-attachment: scroll, fixed;
   /* pour un effet parallax, le dégradé scrolle et l'image reste fixe*/
   background-clip: border-box;
-  /* pour que le fond se redimensionne avec la fenêtre*/
-  background-position: bottom;
+  /* pour que le fond occupe 100% de ma div, y compris sa bordure*/
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
   /*pour pouvoir prendre cet élément comme références pour positionner le reste des éléments*/
 }
 
 .banniere .logo {
-  width: 1300px;
-  /* indiquée par le design de la maquette */
+  max-width: 960px;
+  /* la largeur maximale que pourra prendre mon logo au sein de la div englobante qui elle, prend toute la largeur de la page, la dimension est indiquée par le design de la maquette */
   height: 100%;
   margin: auto;
   /* pour centrer la div horizontalement au sein de la div parente */
   display: -webkit-box;
   display: -ms-flexbox;
-  /* le préfix -ms pour les navigateurs de microsoft*/
   display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  /* aligner les éléments sur le bord gauche de la div*/
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  /* aligner les éléments sur les bords de la div*/
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -77,40 +84,37 @@ html {
 }
 
 .banniere .banniere-title {
-  margin: 0;
-  width: 350px;
-  position: relative;
+  width: 242px;
   font-family: Aladin, serif;
   /* police personnalisée et une police alternative à afficher en attendant le chargement ou en cas d'impossibilité du chargement de la première*/
-  font-size: 90px;
-  line-height: 128%;
+  font-size: 63px;
+  line-height: 1.2em;
+  /* j'utilise le em pour donner la hauteur de ligne relativement à la taille de police utilisée, elle changera en fonction */
   text-align: right;
+  padding-right: 3px;
   color: rgba(255, 255, 255, 0.8);
   text-shadow: 6.6px 5.3px 4.6px rgba(0, 0, 0, 0.4);
+  position: relative;
 }
 
-.banniere h1::after {
-  /*j'utilise un pseudo element pour éviter de polluer mon code HTML pour insérer un élément purement visuel*/
+.banniere-title::after {
+  /* j'utilise un pseudo element pour éviter de polluer mon code HTML pour insérer un élément purement visuel */
   content: '';
   width: 1px;
-  height: 315px;
-
+  height: 290px;
   position: absolute;
   /* Je le positionne relativement à son parrent, soit le h1*/
-  top: -35px;
-  left: 380px;
-
+  top: -68px;
+  left: 254px;
   background-color: rgba(255, 255, 255, 0.6);
 }
 
 .banniere .banniere-text {
-  max-width: 800px;
-  margin-left: 65px;
-
+  max-width: 690px;
   font-family: Montserrat, sans-serif;
-  font-size: 20px;
-  line-height: 160%;
   color: rgba(255, 255, 255, 0.8);
+  padding-left: 3px;
+  /*le texte hérite la taille de police et la hauteur de ligne du body*/
 }
 
 .social-media {
@@ -120,73 +124,87 @@ html {
 
 .menu {
   text-align: end;
-  margin-top: 9px;
 }
 
 .social-media a {
-  margin: 0 0 0 22px;
-  font-size: 40px;
+  margin-left: 14px;
+  font-size: 27px;
   color: inherit;
-  /* hériter la couleur de la div englobante pour un changement d'effet au scroll*/
+  /* hériter la couleur de la div englobante pour permettre un changement d'effet au scroll et pour ne pas appliquer le style par défaut des liens (bleu, souligné)*/
   opacity: 0.7;
 }
 
 .menu a {
-  margin: 0 0 0 40px;
-  font-family: Roboto, sans-serif;
-  font-size: 20px;
-  font-weight: 500;
+  margin-left: 25px;
   text-decoration: none;
-  /* pour ne pas appliquer le style par défaut des liens (bleu, souligné) */
   color: inherit;
   opacity: 0.7;
 }
 
 a:hover,
 a[href="#"] {
-  /* comportement des liens de la navbar au survol de la souris ET du lien de la page affichée */
+  /* comportement des liens de la navbar au survol de la souris ET du lien de la page affichée qui aura un attribut href correspondant à #*/
   opacity: 1;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
 }
 
+.banniere .navbar-links {
+  height: 100%;
+  color: rgb(255, 255, 255);
+  -webkit-transform: translate(0, -100%);
+  -ms-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+  -webkit-transition: all 0.25s ease-out;
+  -o-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+  padding: 15px;
+}
+
+.banniere .navbar-links-fixed {
+  /*cette classe n'est pas attribuée au départ, elle sera attribuée par le script javascript quand le visiteur aura scrollé suffisament pour que la barre de menu atteigne le bord haut de la page */
+  height: 50px;
+  width: 100%;
+  /* par défaut les div prennent 100% de l'espace, mais je le précise par mesure de précaution */
+  background-color: rgb(241, 239, 232);
+  position: fixed;
+  top: 0;
+  /* elle restera visible en haut de la page (d'ou le top:0)*/
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-transition: all 0.25s ease-out;
+  -o-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+  /*pour que le passage à/depuis la position fixe soit fluide et donnera l'effet d'une animation naturelle*/
+  z-index: 2;
+  /*le z-index est affecté pour que la div englobante soit toujours la plus haute et ne soit pas masquée par un autre contenu */
+}
 
 .banniere .navbar {
-  /* La class affectée par défaut, cette classe sera retirée dès que la div atteindra le haut de l'écran et remplacée par une autre classe qui fixe le menu en haut de la fenêtre*/
-  color: rgb(255, 255, 255);
-  position: absolute;
+  height: 100%;
+  max-width: 960px;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-flow: column;
-  flex-flow: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  /*column me sert à superposer les éléments*/
+  -ms-flex-line-pack: end;
+  align-content: flex-end;
+  /*pour aligner le contenu (les menus) sur le bord droit de la div */
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  /* de telle sorte à mettre les éléments aux bords du conteneur et de laisser tout l'espace entre eux */
-  -ms-flex-line-pack: end;
-  align-content: flex-end;
-  height: 100%;
-  top: 0;
-  right: 11.5%;
-  padding: 15px 0;
-  /* 15px en haut ET en bas et 0 à droite ET à gauche*/
-  -webkit-transition: all 0.25s;
-  -o-transition: all 0.25s;
-  /* le préfix -o pour le navigateur opera */
-  transition: all 0.25s ease-out;
-  /*pour que le changement de classe s'effectue d'une manière fluide qui ressemble à une animation*/
+  /*et en haut et en bas verticalement en laissant tout l'espace entre (between) eux*/
 }
 
 .banniere .navbar-fixed {
-  /* la classe qui sera ajoutée et qui remplacera la classe par défaut*/
-  background-color: rgb(255, 255, 255);
-  height: 50px;
-  width: 100%;
-  position: fixed;
-  /* la "barre de navigation" ainsi créée restera fixe à l'écran au scroll*/
-  top: 0;
+  max-width: 960px;
+  height: 100%;
+  margin: auto;
+  padding: 0 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -194,43 +212,42 @@ a[href="#"] {
   -webkit-box-direction: normal;
   -ms-flex-flow: row;
   flex-flow: row;
+  /* quand le menu passera en position fixe, les éléments seront juxtaposés et placés de part et d'autre de la bannière et centrés verticalement*/
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -ms-flex-line-pack: end;
-  align-content: flex-end;
-  padding: 5px 11.5% 10px 10%;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  /* pour accentuer l'effet 3D au scroll*/
-  -webkit-transition: all 0.25s;
-  -o-transition: all 0.25s;
-  transition: all 0.25s ease-out;
-  z-index: 2;
-  /*pour que la div soit la plus haute sur l'axe des Z, le z-index doit enn particulier être défini quand on utilise un positionnement autre que static */
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse;
+  /*quand la div devient trop étroite pour afficher les deux menus, je demande à ce qu'il y'ait un retour à la ligne (d'ou le wrap) mais le menu vers les autres pages en haut et celui vers les réseaux sociaux en bas (d'ou le reverse)*/
 }
 
 .wrapper {
-  width: 1300px;
+  max-width: 960px;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  /*je n'ai pas d'autre paramètres à spécifier, les paramètres par défaut suffisent*/
 }
 
 .wrapper .articles {
-  width: calc(100% - 445px);
-  /* le calc() est utilisé ici pour que la taille de lélément englobant prenne TOUT l'espace laissé par le aside qui lui, a une largeur fixe de 445px*/
-  padding: 25px 30px;
+  width: calc(100% - 316px);
+  /* le calc() est utilisé ici pour que la taille de lélément englobant prenne TOUT l'espace laissé par le aside qui lui, a une largeur fixe de 316px*/
+  padding: 15px;
   -webkit-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.35);
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.35);
+  /*box shadow et pas text shadow comme plus haut pour avoir l'ombre de toute la boite englobante */
   z-index: 1;
+  /*le z-index de 1 met la div articles plus haut que la div aside qui vient après elle en html, donc, par défaut doit être plus haute et donc, l'ombre ne pourra pas être visible */
 }
 
 .articles .main-title {
-  margin: 0 0 25px 0;
+  margin-bottom: 28px;
   font-family: Volkhov, serif;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 700;
 }
 
@@ -238,36 +255,36 @@ a[href="#"] {
   margin: 20px 0;
   position: relative;
   min-height: 180px;
-  /* le min-weight est indiqué ici car comme l'image est en position absolte, le CSS ne la prends pas en compte pour dimensionner la balise englobante, si le texte de l'article est trop court, l'image sera tronquée. la définition d'une hauteur minimum de l'article prévient ce risque*/
-  font-family: roboto, sans-serif;
-  font-size: 17px;
-  line-height: 1.4em;
+  /* le min-weight est indiqué ici car comme l'image est en position absolute, le CSS ne la prends pas en compte pour dimensionner la balise englobante, si le texte de l'article est trop court, l'image sera tronquée. la définition d'une hauteur minimum de l'article prévient ce risque*/
 }
 
 .article .article-title {
-  margin: 0 0 0 275px;
+  margin: 0;
+  margin-left: 190px;
+  /*le margin est calculé par rapport au bord de la div et non à celui de l'image qui sort du flow en raison de sa position absolute*/
   font-family: Volkhov, serif;
-  font-size: 30px;
+  font-size: 26px;
 }
 
 .article .article-subtitle {
-  margin: 5px 0 5px 275px;
+  margin: 10px 0 0 190px;
   font-family: Volkhov, serif;
-  font-size: 25px;
+  font-size: 22px;
   opacity: 0.5;
 }
 
 .article .text {
-  margin: 0 0 0 275px;
+  margin: 15px 0 0 190px;
 }
 
-.article .text span {
-  /* le span me permet de mettre en valeur certains éléments de mon texte*/
+span {
+  /* le span me permet de mettre en valeur certains éléments de mon texte, il est indiqué seul car utilisé dans plusieurs éléments de différentes classes*/
   font-weight: 700;
+  /* un font-weight de 700 correspond à une police Bold */
 }
 
-.article img {
-  width: 250px;
+.article-image img {
+  max-width: 175px;
   height: auto;
   position: absolute;
   top: 0;
@@ -282,17 +299,22 @@ a[href="#"] {
   background-color: rgba(88, 77, 65, .3);
 }
 
+.article .article-media {
+  max-width: 614px;
+  margin: auto;
+}
+
 .aside {
-  width: 455px;
+  width: 316px;
   margin: 0;
-  padding: 20px 25px;
+  padding: 30px 17px;
   text-align: center;
   background-color: rgb(236, 233, 226);
 }
 
 .aside .aside-title {
   font-family: Volkhov, serif;
-  font-size: 40px;
+  font-size: 30px;
   line-height: 1.3em;
   /* l'utilisation de em comme unité de mesure c'es pour prendre la taille de la police de l'élément comme référence, si on change le font-size, le line-height s'adaptera en fonction*/
   font-weight: 400;
@@ -300,23 +322,12 @@ a[href="#"] {
 
 .aside .aside-article {
   font-family: montserrat, sans-serif;
-  font-size: 20px;
-  line-height: 1.6em;
+  font-size: 14px;
   text-align: justify;
 }
 
-.aside .aside-article span {
-  font-weight: 700;
-}
-
-.aside img:first-of-type {
-  /* la pseudo classe first-of type ou nth-of type me permet de sélectionner le premier ou le nième élément du type image dans mon conteneur aside*/
-  width: 190px;
-  height: auto;
-}
-
-.aside img:nth-of-type(2) {
-  width: 205px;
+.aside img {
+  width: 140px;
   height: auto;
 }
 
@@ -328,4 +339,89 @@ a[href="#"] {
   background-color: rgb(88, 77, 65);
   margin: 0;
   padding: 7px;
+}
+
+@media screen and (max-width : 960px) {
+
+  /*Les média queries pour affecter des comportements différents en fonction de la taille (max-width) de l'écran (media screen)*/
+  .banniere h1::after {
+    display: none;
+  }
+}
+
+@media screen and (max-width : 820px) {
+
+  .wrapper,
+  .wrapper .articles,
+  .aside {
+    width: 100%;
+    display: block;
+    /*la wrapper qui était en display flex passe en display normal et les éléments qui le composent prennent 100% de l'espace désormais disponible*/
+  }
+}
+
+@media screen and (max-width : 590px) {
+  .banniere {
+    height: 280px;
+    background-image: url('../images/banniereMosquee.jpg');
+    background-size: cover;
+  }
+
+  .banniere .banniere-text {
+    display: none;
+  }
+
+  /*je retire le texte de la bannière*/
+
+  .banniere .logo {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    /*je mon logo repositionne au centre de la banière*/
+  }
+
+  .banniere .banniere-title {
+    font-size: 80px;
+    text-align: center;
+    width: 80%;
+    /*plus grande taille de police et qu'il prenne plus de place au sein de la bannière*/
+  }
+
+  .banniere .navbar-links-fixed {
+    height: auto;
+    /*je ne fixe pas la taille, elle sera calculée en fonction des éléments qu'elle englobe*/
+  }
+
+  .menu {
+    margin: 5px 0;
+  }
+
+  .banniere .navbar-fixed {
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    /*pour centrer les éléments quand ils seront superposés*/
+  }
+
+  .article-image img {
+    position: static;
+    /* On retire la position absolute des images pour un affichage "normal" */
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    /* et faire en sorte que l'image prenne tous l'espace disponible */
+  }
+
+  .article-image {
+    text-align: center;
+  }
+
+  .articles .text,
+  .articles .article-title,
+  .articles .article-subtitle {
+    margin: 10px;
+  }
 }
