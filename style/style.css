@@ -15,7 +15,6 @@ html {
 
 .header .navbar-fixed {
     width: 100%;
-    height: 45px;
     position: fixed;
     top: 0;
     background-color: rgb(241, 239, 232);
