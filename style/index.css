@@ -382,9 +382,9 @@ span {
   }
 
   .banniere .banniere-title {
-    font-size: 80px;
+    font-size: 65px;
     text-align: center;
-    width: 80%;
+    width: 70%;
     /*plus grande taille de police et qu'il prenne plus de place au sein de la bannière*/
   }
 
