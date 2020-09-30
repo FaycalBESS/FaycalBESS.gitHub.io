@@ -337,6 +337,8 @@ span {
   font-family: roboto, sans-serif;
   color: rgba(255, 255, 255, 0.5);
   text-align: center;
+  word-break: keep-all;
+  /*Petit détail esthétique afin que, lorseque la largeur de l'écran devient trop petite, il n'y ait pas de césure au mot e-business*/
 }
 
 @media screen and (max-width: 960px) {
