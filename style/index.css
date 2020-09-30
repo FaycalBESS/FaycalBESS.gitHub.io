@@ -135,9 +135,10 @@ html {
 }
 
 .menu a {
-  margin-left: 25px;
+  margin: 0 7px;
   text-decoration: none;
   color: inherit;
+  /*Si on ne définit pas une couleur, la couleur par défaut du lien prévaudra sur la couleur du parrent*/
   opacity: 0.7;
 }
 
@@ -162,7 +163,6 @@ a[href="#"] {
 
 .banniere .navbar-links-fixed {
   /*cette classe n'est pas attribuée au départ, elle sera attribuée par le script javascript quand le visiteur aura scrollé suffisament pour que la barre de menu atteigne le bord haut de la page */
-  height: 50px;
   width: 100%;
   /* par défaut les div prennent 100% de l'espace, mais je le précise par mesure de précaution */
   background-color: rgb(241, 239, 232);
@@ -180,8 +180,8 @@ a[href="#"] {
 }
 
 .banniere .navbar {
-  height: 100%;
   max-width: 960px;
+  height: 100%;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -202,9 +202,8 @@ a[href="#"] {
 
 .banniere .navbar-fixed {
   max-width: 960px;
-  height: 100%;
+  height: 45px;
   margin: auto;
-  padding: 0 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
