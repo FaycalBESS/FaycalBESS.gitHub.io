@@ -15,8 +15,7 @@ certaines prorpriétés ne sont pas encore entièrement prises en charges par l'
 body,
 html {
   margin: 0;
-  font-family: Roboto,
-    sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 17px;
   line-height: 1.4;
   color: rgb(88, 77, 65);
@@ -40,7 +39,8 @@ html {
 .banniere {
   height: 360px;
   background-image: -webkit-gradient(linear,
-      left top, left bottom,
+      left top,
+      left bottom,
       from(rgb(0, 0, 0)),
       color-stop(116.86%, rgba(196, 196, 196, 0))),
     url('../images/banniereMosquee.jpg');
@@ -57,7 +57,7 @@ html {
   /* pour un effet parallax, le dégradé scrolle et l'image reste fixe*/
   background-clip: border-box;
   /* pour que le fond occupe 100% de ma div, y compris sa bordure*/
-  background-position: center;
+  background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
@@ -143,7 +143,7 @@ html {
 }
 
 a:hover,
-a[href="#"] {
+a[href='#'] {
   /* comportement des liens de la navbar au survol de la souris ET du lien de la page affichée qui aura un attribut href correspondant à #*/
   opacity: 1;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
@@ -294,7 +294,7 @@ span {
   display: block;
   height: 1px;
   margin: 20px 0;
-  background-color: rgba(88, 77, 65, .3);
+  background-color: rgba(88, 77, 65, 0.3);
 }
 
 .article .article-media {
@@ -330,16 +330,16 @@ span {
 }
 
 .footer {
-  font-size: 15px;
-  font-family: roboto, sans-serif;
-  color: rgba(255, 255, 255, .5);
-  text-align: center;
   background-color: rgb(88, 77, 65);
   margin: 0;
   padding: 7px;
+  font-size: 15px;
+  font-family: roboto, sans-serif;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
 }
 
-@media screen and (max-width : 960px) {
+@media screen and (max-width: 960px) {
 
   /*Les média queries pour affecter des comportements différents en fonction de la taille (max-width) de l'écran (media screen)*/
   .banniere h1::after {
@@ -347,7 +347,7 @@ span {
   }
 }
 
-@media screen and (max-width : 820px) {
+@media screen and (max-width: 820px) {
 
   .wrapper,
   .wrapper .articles,
@@ -358,7 +358,7 @@ span {
   }
 }
 
-@media screen and (max-width : 590px) {
+@media screen and (max-width: 590px) {
   .banniere {
     height: 280px;
     background-image: url('../images/banniereMosquee.jpg');
@@ -393,10 +393,6 @@ span {
     /*je ne fixe pas la taille, elle sera calculée en fonction des éléments qu'elle englobe*/
   }
 
-  .menu {
-    margin: 5px 0;
-  }
-
   .banniere .navbar-fixed {
     -webkit-box-pack: space-evenly;
     -ms-flex-pack: space-evenly;
@@ -423,3 +419,5 @@ span {
     margin: 10px;
   }
 }
+
+/* Les medias queries ont été faites sur la bases de break point à partir desquels j'ai remarqué que le design de mon site s'altérait, le principe est le même pour réaliser des designs plus fins pour les principaux appareils du marché  */
