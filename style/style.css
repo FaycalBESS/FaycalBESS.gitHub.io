@@ -105,6 +105,15 @@ a[href="#"] {
     float: left;
 }
 
+.float figure, .no-float figure{
+    margin : 0;
+}
+
+.float figcaption, .no-float figcaption {
+font-size: 0.8rem;
+font-style: italic;
+}
+
 .article .no-float {
     max-width: 960px;
     margin: 0;
