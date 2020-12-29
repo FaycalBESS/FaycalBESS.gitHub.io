@@ -1,0 +1,16 @@
+ErrorDocument 404 /404.html
+
+
+# pour faire une règle de redirection de http vers https 
+
+RewriteEngine on
+RewriteCond %{HTTPS} !=on
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# pour afficher correctement les fontawesome sur firefox 
+
+<FilesMatch "\.(ttf|otf|eot|woff)$">
+  <IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+  </IfModule>
+</FilesMatch>
