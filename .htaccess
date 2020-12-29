@@ -9,8 +9,14 @@ RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
 # pour afficher correctement les fontawesome sur firefox 
 
-<FilesMatch "\.(ttf|otf|eot|woff)$">
-  <IfModule mod_headers.c>
+#<FilesMatch "\.(ttf|otf|eot|woff)$">
+#  <IfModule mod_headers.c>
+#    Header set Access-Control-Allow-Origin "*"
+#  </IfModule>
+#</FilesMatch>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font.css|css|js)$">
     Header set Access-Control-Allow-Origin "*"
-  </IfModule>
-</FilesMatch>
+  </FilesMatch>
+</IfModule>
