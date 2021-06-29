@@ -44,7 +44,7 @@ html {
 
 }
 
-.social-media a {
+.social-medya a {
     margin: 0 5px;
     font-size: 28px;
     color: inherit;
@@ -105,13 +105,15 @@ a[href="#"] {
     float: left;
 }
 
-.float figure, .no-float figure{
-    margin : 0;
+.float figure,
+.no-float figure {
+    margin: 0;
 }
 
-.float figcaption, .no-float figcaption {
-font-size: 0.8rem;
-font-style: italic;
+.float figcaption,
+.no-float figcaption {
+    font-size: 0.8rem;
+    font-style: italic;
 }
 
 .article .no-float {

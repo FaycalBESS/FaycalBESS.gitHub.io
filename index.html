@@ -4,25 +4,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Pour un meilleur affichage sur les écrans mobile, la balise meta viewport ainsi formulée permet d'indiquer que le width correspond à la largeur de l'écran du terminal -->
 
   <title>A la découverte de la Casbah d'Alger, Véritable joyau de la méditerranée</title>
-  <!--Le title qui sera repris sur l'onglet du navigateur et dans les SERP-->
 
   <meta name="description"
     content="Véritable joyau de la méditerrannée, héritière d'une histoire millénaire, la Casbah d'Alger s'érige sur la baie d'Alger,  laissant très facilement entrevoir, à qui le souhaite, tout son charme et sa magie d'antant" />
-    <meta name="keywords" content="Casbah, Alger, Othomans, Barberousse">
-  <!--La description qui permettra aux moteurs de recherche de mieux indexer mon site (doit être placée après la balise title), la meta keywords est désormais désuette mais c'est utile quand même pour le SEO de mettre quelques mots clé-->
+  <meta name="keywords" content="Casbah, Alger, Othomans, Barberousse">
 
   <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-  <!-- la petite icone qui apparaîtra sur l'onglet du navigateur ou quand le site sera rajouté aux favoris-->
 
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@400;500&family=Volkhov&display=swap"
     rel="stylesheet" />
-  <!-- J'intègre le lien vers le fichier CSS de google fonts pour utiliser des polices personnalisées -->
+
+  <link rel="stylesheet" href="style/css/all.css">
+
   <link rel="stylesheet" href="style/index.css" />
-  <!-- je link ma feuille de style CSS-->
+
 
   <meta property="og:title" content="A la découverte de la Casbah d'Alger, Véritable joyau de la méditerranée " />
   <meta property="og:site_name" content="La Casbah d'Alger" />
@@ -31,18 +29,12 @@
     content="Son rôle dans le bassin méditerranéen, son histoire, le baie qu'elle surplombe, son architecture et son urbanisme particuliers confèrent à la Casbah cet intérêt qui dépasse les frontières" />
   <meta property="og:type" content="place" />
   <meta property="og:image" content="https://faycalbess.github.io/images/banniereMosqueeOGP.png" />
-  <!--Les balises méta property="og..." de opengraph permette de maitriser l'apperçu qu'aura le site quand il est partagé sur les réseaux sociaux (affichage d'une miniature, d'informations succintes etc)  -->
 
-  <script src="https://kit.fontawesome.com/5871652cc4.js" crossorigin="anonymous"></script>
-  <!-- lien vers le script Font Awesome me permettant d'utiliser une très grande palette d'icones-->
- 
 </head>
 
 <body>
 
-  <!-- la bannière avec l'arrière plan et le texte (englobée dans une balise header) -->
   <header class="banniere">
-    <!-- pour une bonne structuration de la page html, j'adopte un layout header/nav/main/aside/footer-->
     <div class="logo">
       <h1 class="banniere-title">La Casbah d'Alger</h1>
       <p class="banniere-text">
@@ -57,13 +49,11 @@
       </p>
     </div>
 
-    <!-- la barre de menu avec les liens vers les autres pages du site et vers les réseaux sociaux -->
     <nav class="navbar-links" id="navbar-links">
-      <!-- J'englobe ma navbar dans un autre container pour pouvoir la centrer à l'écran quand elle passera à position fixed tout en conservant sa largeur minimale de 960px -->
 
       <div class="navbar" id="navbar">
-        <!-- l'utilisation d'un id ici, en plus de la classe me permet de cibler plus facilement l'élément en javascript même en lui changeant de classe-->
-        <div class="social-media">
+
+        <div class="social-medya">
           <a href="https://www.youtube.com" target="_blank" title="Abonnez-vous à notre chaine Youtube"><i
               class="fab fa-youtube-square"></i></a>
           <a href="https://www.instagram.com" target="_blank" title="Suivez les stories postées par nos fans"><i
@@ -74,25 +64,22 @@
               class="fab fa-facebook-square"></i></a>
           <a href="https://www.pinterest.com" target="_blank" title="Admirez les plus belles photos de la casbah"><i
               class="fab fa-pinterest-square"></i></a>
-          <!-- l'élément i (pour icone) me permet d'insérer les icones FontAwesome dont le script à été attaché dans le head (ligne 29) 
-          le target="_blank" permet d'afficher la page sur le réseau social dans un autre onglet du navigateur -->
+
         </div>
         <div class="menu" id="menu">
           <a href="#" title="Accueil">Accueil</a>
           <a href="histoire.html" title="Histoire de la Casbah">Histoire</a>
           <a href="visite.html" title="A la visite des sites et monuments de la médina">Visite Guidée</a>
           <a href="contact.html" title="Joignez-vous à nous">Contact</a>
-          <!--L'attribut title permet d'afficher une infobulle au survol de la souris pour donner plus de détails sur le lien-->
+
         </div>
       </div>
     </nav>
   </header>
 
-  <!-- Le contenu de la page (englobé dans une balise main)-->
   <main class="wrapper">
     <div class="articles">
       <h2 class="main-title">Aux origines de la ville</h2>
-      <!-- pour les besoin SEO, il n'est utilisé qu'un seul titre h1 dans la page, j'utilise d'autres niveaux de titre pour le reste du document-->
 
       <div class="article">
         <h3 class="article-title">Période Punique</h3>
@@ -105,7 +92,7 @@
           L’appellation donnée à ce site fut <span>ICOSIM</span> faisant
           partie du royaume de Maurétanie, gouverné par des rois berbères et
           signifiant <span>« îles des mouettes »</span>
-          <!-- l'utilisation du span me permet de mettre en évidence certain passage du texte, le span sera stylisé en CSS-->
+
         </p>
       </div>
 
@@ -132,7 +119,7 @@
         <h4 class="article-subtitle">EL DJAZAIR BENI MEZGHENA</h4>
         <div class="article-image"><img src="images/araboBerbere.jpg"
             alt="Naissance du nom actuel de la ville d'Alger" /></div>
-        <!--L'attribut alt ajouté sur les images permet de mettre un text alternatif qui sera affiché en attendant le chargement de l'image et qui sera très utile pour les personne déficients visuellement ou utilisant une liseuse-->
+
         <p class="text">
           En 960, la ville d’<span>El Djazair</span> fut fondée par
           <span>BOULOUGHINE IBN ZIRI</span> La première configuration de la
@@ -161,26 +148,24 @@
           <span>la Citadelle</span> : place du pouvoir.
         </p>
       </div>
-      <!-- On définit une structure pour la page, elle pourra se répéter autant de fois qu'il y a d'article, d'ou l'intérêt d'utiliser des classes au lieu/en plus des id-->
+
 
       <div class="articles-media">
         <video controls width="100%" poster="images/rempartsCasbah.jpg">
-          <!-- on peut inclure une vidéo locale avec la balise video, la taille indiquée de 100% signifie que la vidéo remplira toute l'élément englobant et s'adaptera à la largeur de l'écran tout en conservant les proportions -->
+
           <source src="images/videos/Casbah.webm" type="video/webm" />
           <source src="images/videos/Casbah.mp4" type="video/mp4" />
           <source src="images/videos/Casbah.ogg" type="video/ogg" />
-          <!-- la balise source permet d'indiquer plusieurs sources pour la vidéo, en fonction des compatibilité, le navigateur prendra la première source qu'il saura lire, webm doit cependant être indiquée en premier pour assurer une lecture sur les appareils iOS
-                      pour respecter la consigne relative à la taille du dossier à remettre, je liste ici le lien de la vidéo en mp4 et ogg mais je ne les incluerai pas dans le zip car le fichier MP4 fait à lui seul 91Mo -->
+
           Oops, on dirait que votre navigateur ne peut pas lire les vidéos
           embarquées.<br />
           C'est pas grave, vous pouvez la télécharger
           <a href="images/videos/Casbah.mp4">ici</a>.
-          <!-- un message qui s'indique dans le cas ou le navigateur ne peut lire aucune des sources fournies, dans ce cas, je propose au visiteur de télécharger la vidéo-->
+
         </video>
       </div>
     </div>
 
-    <!-- Le contenu mis en évidence au sein de la page (englobé dans une balise Aside)-->
     <aside class="aside">
       <h2 class="aside-title">Les Armoiries de la ville</h2>
       <img src="images/armoiries.png" alt="Les armoiries de la ville" />
@@ -220,7 +205,6 @@
     </aside>
   </main>
 
-  <!-- Le pied de page pour les mentions légales ou pour le plan du site par exemple (englobé dans une balise footer)-->
   <footer>
     <p class="footer">
       Fayçal BESSAH - HTML & CSS - ESG-Executive e-Business & Stratégie
@@ -230,7 +214,7 @@
 
 
   <script src="scripts/script.js"></script>
-  <!-- un petit script javascript permettant de fixer le menu en haut de la fenêtre au scroll, le script est inséré juste avant la balise fermante du body, de telle sorte que tous les éléments aient fini de se charger -->
+
 </body>
 
 </html>

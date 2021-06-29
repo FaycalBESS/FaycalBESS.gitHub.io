@@ -117,7 +117,7 @@ html {
   /*le texte hérite la taille de police et la hauteur de ligne du body*/
 }
 
-.social-media {
+.social-medya {
   /* je passe à un sélecteur d'un seul niveau car l'objet englobant change de classe en fonction de sa position dans la page (cf ligne 128)*/
   text-align: end;
 }
@@ -126,7 +126,7 @@ html {
   text-align: end;
 }
 
-.social-media a {
+.social-medya a {
   margin-left: 14px;
   font-size: 27px;
   color: inherit;
